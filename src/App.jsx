@@ -20,10 +20,10 @@ export default function App() {
         <main>
           <Hero />
           <Skills />
-          <Experience />
+          <ClubSection />
           <Education />
           <Projects />
-          <ClubSection />
+          <Experience />
           <Certifications />
           <CodingProfiles />
           <Contact />

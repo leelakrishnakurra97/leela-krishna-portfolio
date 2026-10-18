@@ -16,10 +16,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
+    { name: 'IEEE ITS Club', href: '#clubs' },
     { name: 'Education', href: '#education' },
     { name: 'Projects', href: '#projects' },
-    { name: 'IEEE ITS Club', href: '#clubs' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' }
   ];
