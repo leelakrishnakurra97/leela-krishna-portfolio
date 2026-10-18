@@ -1,8 +1,7 @@
 import React from 'react';
 import { greeting, socialMediaLinks } from '../portfolio';
 import { Download, ArrowRight, Mail } from 'lucide-react';
-import DisplayLottie from './DisplayLottie';
-import landingPersonAnimation from '../assets/lottie/landingPerson.json';
+import HeroAnimation from './HeroAnimation';
 
 export default function Hero() {
 
@@ -278,11 +277,7 @@ export default function Hero() {
               justifyContent: 'center'
             }}
           >
-            <DisplayLottie
-              animationData={landingPersonAnimation}
-              style={{ maxWidth: '500px', width: '100%' }}
-              lottieStyle={{ height: '400px' }}
-            />
+            <HeroAnimation />
           </div>
         </div>
       </div>
