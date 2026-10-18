@@ -27,13 +27,37 @@ export default function Skills() {
       skills: [
         { name: "React 18", icon: "devicon-react-original colored" },
         { name: "Next.js", icon: "devicon-nextjs-original" },
-        { name: "Vite", icon: "devicon-vite-original colored" },
+        {
+          name: "Vite",
+          customIcon: (
+            <svg width="42" height="42" viewBox="0 0 32 32" fill="none">
+              <path
+                d="M29.897 4.148L16.892 27.652a1.05 1.05 0 01-1.848.006L2.1 4.153a1.05 1.05 0 011.39-1.428l12.51 5.485 12.502-5.49a1.05 1.05 0 011.395 1.428z"
+                fill="url(#viteGrad1)"
+              />
+              <path
+                d="M22.062 1.547L11.59 7.422l-1.395 7.828 4.316-1.07-1.574 8.797 8.875-12.875-4.254.734 4.504-9.289z"
+                fill="url(#viteGrad2)"
+              />
+              <defs>
+                <linearGradient id="viteGrad1" x1="1.5" y1="2" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#41D1FF" />
+                  <stop offset="1" stopColor="#BD34FE" />
+                </linearGradient>
+                <linearGradient id="viteGrad2" x1="10" y1="2" x2="21" y2="20" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#FFEA83" />
+                  <stop offset="1" stopColor="#FFDD35" />
+                </linearGradient>
+              </defs>
+            </svg>
+          )
+        },
         { name: "HTML5", icon: "devicon-html5-plain colored" },
         { name: "CSS3", icon: "devicon-css3-plain colored" },
         { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
         { name: "JavaScript", icon: "devicon-javascript-plain colored" },
         { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-        { name: "LiveKit WebRTC", icon: "fa-solid fa-video" }
+        { name: "LiveKit WebRTC", icon: "fa-solid fa-video", iconColor: "#4f46e5" }
       ]
     },
     {
@@ -46,10 +70,10 @@ export default function Skills() {
         { name: "Node.js", icon: "devicon-nodejs-plain colored" },
         { name: "Express.js", icon: "devicon-express-original" },
         { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
-        { name: "RESTful APIs", icon: "fa-solid fa-network-wired" },
-        { name: "JWT Auth", icon: "fa-solid fa-key" },
-        { name: "RBAC", icon: "fa-solid fa-user-shield" },
-        { name: "Microservices", icon: "fa-solid fa-cubes" }
+        { name: "RESTful APIs", icon: "fa-solid fa-network-wired", iconColor: "#0284c7" },
+        { name: "JWT Auth", icon: "fa-solid fa-key", iconColor: "#eab308" },
+        { name: "RBAC", icon: "fa-solid fa-user-shield", iconColor: "#10b981" },
+        { name: "Microservices", icon: "fa-solid fa-cubes", iconColor: "#8b5cf6" }
       ]
     },
     {
@@ -65,7 +89,7 @@ export default function Skills() {
         { name: "C++", icon: "devicon-cplusplus-plain colored" },
         { name: "Java", icon: "devicon-java-plain colored" },
         { name: "C", icon: "devicon-c-plain colored" },
-        { name: "SQL", icon: "fa-solid fa-database" },
+        { name: "SQL", icon: "fa-solid fa-database", iconColor: "#3b82f6" },
         { name: "Bash", icon: "devicon-bash-plain colored" }
       ]
     },
@@ -80,7 +104,7 @@ export default function Skills() {
         { name: "Prisma ORM", icon: "devicon-prisma-original colored" },
         { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
         { name: "MySQL", icon: "devicon-mysql-plain colored" },
-        { name: "Relational SQL", icon: "fa-solid fa-database" }
+        { name: "Relational SQL", icon: "fa-solid fa-database", iconColor: "#0ea5e9" }
       ]
     },
     {
@@ -90,11 +114,11 @@ export default function Skills() {
       icon: <ShieldCheck size={20} style={{ color: 'var(--accent-primary)' }} />,
       description: "Deep packet inspection, network anomaly detection, DNS threat analysis, and secure coding standards.",
       skills: [
-        { name: "Network Security", icon: "fa-solid fa-shield-halved" },
-        { name: "Wireshark", icon: "fa-solid fa-network-wired" },
-        { name: "Packet Inspection (.pcap)", icon: "fa-solid fa-file-code" },
-        { name: "DNS Forensics", icon: "fa-solid fa-magnifying-glass" },
-        { name: "DGA Detection", icon: "fa-solid fa-bug-slash" }
+        { name: "Network Security", icon: "fa-solid fa-shield-halved", iconColor: "#4f46e5" },
+        { name: "Wireshark", icon: "fa-solid fa-network-wired", iconColor: "#0284c7" },
+        { name: "Packet Inspection (.pcap)", icon: "fa-solid fa-file-code", iconColor: "#f59e0b" },
+        { name: "DNS Forensics", icon: "fa-solid fa-magnifying-glass", iconColor: "#8b5cf6" },
+        { name: "DGA Detection", icon: "fa-solid fa-bug-slash", iconColor: "#ef4444" }
       ]
     },
     {
@@ -257,42 +281,39 @@ export default function Skills() {
           })}
         </div>
 
-        {/* Categorized Skills Display: Filtered by active tab */}
+        {/* ONE SINGLE BOX WITH BIGGER LOGOS */}
         <div
+          className="glass-card"
           style={{
-            display: 'grid',
-            gridTemplateColumns: activeCategory === 'All' ? 'repeat(auto-fit, minmax(320px, 1fr))' : '1fr',
-            gap: '1.75rem',
-            maxWidth: '100%'
+            padding: '2.5rem',
+            border: '1.5px solid var(--border-color)',
+            backgroundColor: '#ffffff'
           }}
         >
           {filteredCategories.map((cat, idx) => (
             <div
-              key={idx}
-              className="glass-card"
+              key={cat.id}
               style={{
-                padding: activeCategory === 'All' ? '1.75rem 1.5rem' : '2.25rem 2rem',
-                border: '1.5px solid var(--border-color)',
-                display: 'flex',
-                flexDirection: 'column'
+                marginBottom: idx < filteredCategories.length - 1 ? '3rem' : '0'
               }}
             >
+              {/* Category Subheader inside the single box */}
               <div
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  gap: '0.75rem',
+                  gap: '1rem',
                   marginBottom: '1rem',
-                  paddingBottom: '0.85rem',
+                  paddingBottom: '0.75rem',
                   borderBottom: '1px solid var(--border-color)'
                 }}
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div
                     style={{
-                      width: '38px',
-                      height: '38px',
+                      width: '36px',
+                      height: '36px',
                       backgroundColor: 'var(--badge-bg)',
                       border: '1px solid #c7d2fe',
                       borderRadius: '0px',
@@ -304,25 +325,23 @@ export default function Skills() {
                   >
                     {cat.icon}
                   </div>
-                  <div>
-                    <h4
-                      style={{
-                        fontSize: '1.12rem',
-                        fontWeight: 700,
-                        color: 'var(--text-primary)',
-                        margin: 0
-                      }}
-                    >
-                      {cat.title}
-                    </h4>
-                  </div>
+                  <h4
+                    style={{
+                      fontSize: '1.18rem',
+                      fontWeight: 700,
+                      color: 'var(--text-primary)',
+                      margin: 0
+                    }}
+                  >
+                    {cat.title}
+                  </h4>
                 </div>
 
                 <span
                   style={{
-                    fontSize: '0.8rem',
+                    fontSize: '0.82rem',
                     fontWeight: 600,
-                    padding: '0.2rem 0.6rem',
+                    padding: '0.25rem 0.65rem',
                     backgroundColor: 'var(--code-bg)',
                     border: '1px solid var(--border-color)',
                     color: 'var(--text-secondary)'
@@ -335,37 +354,82 @@ export default function Skills() {
               {activeCategory !== 'All' && (
                 <p
                   style={{
-                    fontSize: '0.92rem',
+                    fontSize: '0.94rem',
                     color: 'var(--text-secondary)',
-                    marginBottom: '1.25rem',
-                    lineHeight: 1.5
+                    marginBottom: '1.5rem',
+                    lineHeight: 1.55
                   }}
                 >
                   {cat.description}
                 </p>
               )}
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem' }}>
+              {/* Grid of Big Logo Tiles */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(135px, 1fr))',
+                  gap: '1.15rem'
+                }}
+              >
                 {cat.skills.map((skill, sIdx) => (
-                  <span
+                  <div
                     key={sIdx}
-                    className="tech-pill"
                     style={{
-                      fontSize: '0.86rem',
-                      fontWeight: 600,
-                      padding: '0.45rem 0.85rem',
-                      borderRadius: '0px',
-                      backgroundColor: 'var(--code-bg)',
-                      border: '1px solid var(--border-color)',
-                      color: 'var(--text-primary)',
-                      display: 'inline-flex',
+                      display: 'flex',
+                      flexDirection: 'column',
                       alignItems: 'center',
-                      gap: '0.5rem'
+                      justifyContent: 'center',
+                      padding: '1.35rem 0.85rem',
+                      backgroundColor: '#ffffff',
+                      border: '1.5px solid var(--border-color)',
+                      borderRadius: '0px',
+                      textAlign: 'center',
+                      minHeight: '120px',
+                      transition: 'all 0.2s ease',
+                      cursor: 'default'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--accent-primary)';
+                      e.currentTarget.style.transform = 'translateY(-3px)';
+                      e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.06)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = 'var(--border-color)';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
                     }}
                   >
-                    <i className={skill.icon} style={{ fontSize: '1.1rem' }}></i>
-                    {skill.name}
-                  </span>
+                    <div
+                      style={{
+                        fontSize: '2.85rem',
+                        height: '50px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '0.65rem'
+                      }}
+                    >
+                      {skill.customIcon ? (
+                        skill.customIcon
+                      ) : (
+                        <i
+                          className={skill.icon}
+                          style={skill.iconColor ? { color: skill.iconColor } : undefined}
+                        ></i>
+                      )}
+                    </div>
+                    <span
+                      style={{
+                        fontSize: '0.88rem',
+                        fontWeight: 600,
+                        color: 'var(--text-primary)',
+                        lineHeight: 1.3
+                      }}
+                    >
+                      {skill.name}
+                    </span>
+                  </div>
                 ))}
               </div>
             </div>
