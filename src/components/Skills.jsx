@@ -1,47 +1,128 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { skillsSection } from '../portfolio';
 import DisplayLottie from './DisplayLottie';
 import codingPersonAnimation from '../assets/lottie/codingPerson.json';
 import { Code2, Layers, Server, Database, ShieldCheck, Cloud } from 'lucide-react';
 
 export default function Skills() {
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const categories = [
+    'All',
+    'Frontend',
+    'Backend',
+    'Languages',
+    'Databases',
+    'Cybersecurity',
+    'Cloud & DevOps'
+  ];
+
   const skillCategories = [
     {
-      name: "Programming Languages",
-      icon: <Code2 size={20} style={{ color: 'var(--accent-primary)' }} />,
-      skills: ["Python", "TypeScript", "JavaScript", "C++", "Java", "C", "SQL", "Bash"]
-    },
-    {
-      name: "Frontend & Full Stack",
+      id: "Frontend",
+      name: "Frontend",
+      title: "Frontend & Full Stack",
       icon: <Layers size={20} style={{ color: 'var(--accent-primary)' }} />,
-      skills: ["React 18", "Next.js", "Vite", "HTML5", "CSS3", "LiveKit WebRTC", "Tailwind CSS"]
+      description: "Developing responsive, accessible, and high-performance user interfaces and real-time client applications.",
+      skills: [
+        { name: "React 18", icon: "devicon-react-original colored" },
+        { name: "Next.js", icon: "devicon-nextjs-original" },
+        { name: "Vite", icon: "devicon-vite-original colored" },
+        { name: "HTML5", icon: "devicon-html5-plain colored" },
+        { name: "CSS3", icon: "devicon-css3-plain colored" },
+        { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
+        { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+        { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+        { name: "LiveKit WebRTC", icon: "fa-solid fa-video" }
+      ]
     },
     {
-      name: "Backend & Systems",
+      id: "Backend",
+      name: "Backend",
+      title: "Backend & Systems",
       icon: <Server size={20} style={{ color: 'var(--accent-primary)' }} />,
-      skills: ["Node.js", "Express.js", "FastAPI", "RESTful APIs", "JWT Auth", "RBAC", "Microservices"]
+      description: "Engineering scalable backend architectures, high-throughput microservices, and secure RESTful APIs.",
+      skills: [
+        { name: "Node.js", icon: "devicon-nodejs-plain colored" },
+        { name: "Express.js", icon: "devicon-express-original" },
+        { name: "FastAPI", icon: "devicon-fastapi-plain colored" },
+        { name: "RESTful APIs", icon: "fa-solid fa-network-wired" },
+        { name: "JWT Auth", icon: "fa-solid fa-key" },
+        { name: "RBAC", icon: "fa-solid fa-user-shield" },
+        { name: "Microservices", icon: "fa-solid fa-cubes" }
+      ]
     },
     {
-      name: "Databases & ORMs",
+      id: "Languages",
+      name: "Languages",
+      title: "Programming Languages",
+      icon: <Code2 size={20} style={{ color: 'var(--accent-primary)' }} />,
+      description: "Proficient across compiled, interpreted, and scripting languages with strong algorithmic foundations.",
+      skills: [
+        { name: "Python", icon: "devicon-python-plain colored" },
+        { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+        { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+        { name: "C++", icon: "devicon-cplusplus-plain colored" },
+        { name: "Java", icon: "devicon-java-plain colored" },
+        { name: "C", icon: "devicon-c-plain colored" },
+        { name: "SQL", icon: "fa-solid fa-database" },
+        { name: "Bash", icon: "devicon-bash-plain colored" }
+      ]
+    },
+    {
+      id: "Databases",
+      name: "Databases",
+      title: "Databases & ORMs",
       icon: <Database size={20} style={{ color: 'var(--accent-primary)' }} />,
-      skills: ["PostgreSQL", "Prisma ORM", "MongoDB", "MySQL", "Relational SQL"]
+      description: "Relational database schema modeling, indexing, ACID compliance, and document store optimization.",
+      skills: [
+        { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+        { name: "Prisma ORM", icon: "devicon-prisma-original colored" },
+        { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+        { name: "MySQL", icon: "devicon-mysql-plain colored" },
+        { name: "Relational SQL", icon: "fa-solid fa-database" }
+      ]
     },
     {
-      name: "Cybersecurity & Forensics",
+      id: "Cybersecurity",
+      name: "Cybersecurity",
+      title: "Cybersecurity & Forensics",
       icon: <ShieldCheck size={20} style={{ color: 'var(--accent-primary)' }} />,
-      skills: ["Network Security", "Wireshark", "Packet Inspection (.pcap/.pcapng)", "DNS Forensics", "DGA Detection"]
+      description: "Deep packet inspection, network anomaly detection, DNS threat analysis, and secure coding standards.",
+      skills: [
+        { name: "Network Security", icon: "fa-solid fa-shield-halved" },
+        { name: "Wireshark", icon: "fa-solid fa-network-wired" },
+        { name: "Packet Inspection (.pcap)", icon: "fa-solid fa-file-code" },
+        { name: "DNS Forensics", icon: "fa-solid fa-magnifying-glass" },
+        { name: "DGA Detection", icon: "fa-solid fa-bug-slash" }
+      ]
     },
     {
-      name: "Cloud, DevOps & Tools",
+      id: "Cloud & DevOps",
+      name: "Cloud & DevOps",
+      title: "Cloud, DevOps & Tools",
       icon: <Cloud size={20} style={{ color: 'var(--accent-primary)' }} />,
-      skills: ["Microsoft Azure (AZ-104)", "AWS Cloud", "Docker", "Linux CLI", "Git", "GitHub CI/CD"]
+      description: "Cloud computing governance, container lifecycle management, CI/CD pipelines, and infrastructure tools.",
+      skills: [
+        { name: "Microsoft Azure (AZ-104)", icon: "devicon-azure-plain colored" },
+        { name: "AWS Cloud", icon: "devicon-amazonwebservices-plain-wordmark colored" },
+        { name: "Docker", icon: "devicon-docker-plain colored" },
+        { name: "Linux CLI", icon: "devicon-linux-plain colored" },
+        { name: "Git", icon: "devicon-git-plain colored" },
+        { name: "GitHub CI/CD", icon: "devicon-github-original" }
+      ]
     }
   ];
+
+  const filteredCategories =
+    activeCategory === 'All'
+      ? skillCategories
+      : skillCategories.filter((cat) => cat.id === activeCategory);
 
   return (
     <section id="skills" className="section-wrapper" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
       <div className="container">
-        {/* Section Header - Clean left-aligned matching other sections */}
+        {/* Section Header */}
         <div className="section-title-wrap">
           <h2 className="section-title">Skills</h2>
           <p className="section-subtitle">TECHNICAL EXPERTISE, PROGRAMMING LANGUAGES & DOMAIN CAPABILITIES</p>
@@ -140,21 +221,57 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Categorized Skills Grid */}
+        {/* Category Filter Tabs: All | Frontend | Backend | ... */}
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '0.65rem',
+            justifyContent: 'flex-start',
+            marginBottom: '2rem'
+          }}
+        >
+          {categories.map((cat) => {
+            const isActive = activeCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                style={{
+                  padding: '0.55rem 1.4rem',
+                  borderRadius: '0px',
+                  fontSize: '0.9rem',
+                  fontWeight: 600,
+                  transition: 'background-color 0.15s ease, border-color 0.15s ease',
+                  border: isActive
+                    ? '1.5px solid var(--accent-primary)'
+                    : '1.5px solid var(--border-color)',
+                  backgroundColor: isActive ? 'var(--accent-primary)' : '#ffffff',
+                  color: isActive ? '#ffffff' : 'var(--text-secondary)',
+                  cursor: 'pointer'
+                }}
+              >
+                {cat}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Categorized Skills Display: Filtered by active tab */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: activeCategory === 'All' ? 'repeat(auto-fit, minmax(320px, 1fr))' : '1fr',
             gap: '1.75rem',
             maxWidth: '100%'
           }}
         >
-          {skillCategories.map((cat, idx) => (
+          {filteredCategories.map((cat, idx) => (
             <div
               key={idx}
               className="glass-card"
               style={{
-                padding: '1.75rem 1.5rem',
+                padding: activeCategory === 'All' ? '1.75rem 1.5rem' : '2.25rem 2rem',
                 border: '1.5px solid var(--border-color)',
                 display: 'flex',
                 flexDirection: 'column'
@@ -164,55 +281,90 @@ export default function Skills() {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
+                  justifyContent: 'space-between',
                   gap: '0.75rem',
-                  marginBottom: '1.25rem',
+                  marginBottom: '1rem',
                   paddingBottom: '0.85rem',
                   borderBottom: '1px solid var(--border-color)'
                 }}
               >
-                <div
-                  style={{
-                    width: '38px',
-                    height: '38px',
-                    backgroundColor: 'var(--badge-bg)',
-                    border: '1px solid #c7d2fe',
-                    borderRadius: '0px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0
-                  }}
-                >
-                  {cat.icon}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <div
+                    style={{
+                      width: '38px',
+                      height: '38px',
+                      backgroundColor: 'var(--badge-bg)',
+                      border: '1px solid #c7d2fe',
+                      borderRadius: '0px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0
+                    }}
+                  >
+                    {cat.icon}
+                  </div>
+                  <div>
+                    <h4
+                      style={{
+                        fontSize: '1.12rem',
+                        fontWeight: 700,
+                        color: 'var(--text-primary)',
+                        margin: 0
+                      }}
+                    >
+                      {cat.title}
+                    </h4>
+                  </div>
                 </div>
-                <h4
+
+                <span
                   style={{
-                    fontSize: '1.08rem',
-                    fontWeight: 700,
-                    color: 'var(--text-primary)',
-                    margin: 0
+                    fontSize: '0.8rem',
+                    fontWeight: 600,
+                    padding: '0.2rem 0.6rem',
+                    backgroundColor: 'var(--code-bg)',
+                    border: '1px solid var(--border-color)',
+                    color: 'var(--text-secondary)'
                   }}
                 >
-                  {cat.name}
-                </h4>
+                  {cat.skills.length} Skills
+                </span>
               </div>
 
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+              {activeCategory !== 'All' && (
+                <p
+                  style={{
+                    fontSize: '0.92rem',
+                    color: 'var(--text-secondary)',
+                    marginBottom: '1.25rem',
+                    lineHeight: 1.5
+                  }}
+                >
+                  {cat.description}
+                </p>
+              )}
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem' }}>
                 {cat.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
                     className="tech-pill"
                     style={{
-                      fontSize: '0.82rem',
+                      fontSize: '0.86rem',
                       fontWeight: 600,
-                      padding: '0.35rem 0.75rem',
+                      padding: '0.45rem 0.85rem',
                       borderRadius: '0px',
                       backgroundColor: 'var(--code-bg)',
                       border: '1px solid var(--border-color)',
-                      color: 'var(--text-primary)'
+                      color: 'var(--text-primary)',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
                     }}
                   >
-                    {skill}
+                    <i className={skill.icon} style={{ fontSize: '1.1rem' }}></i>
+                    {skill.name}
                   </span>
                 ))}
               </div>
