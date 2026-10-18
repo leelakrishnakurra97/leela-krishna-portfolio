@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import { skillsSection } from '../portfolio';
-import DisplayLottie from './DisplayLottie';
-import codingPersonAnimation from '../assets/lottie/codingPerson.json';
 import { Code2, Layers, Server, Database, ShieldCheck, Cloud } from 'lucide-react';
 
 export default function Skills() {
@@ -150,99 +147,6 @@ export default function Skills() {
         <div className="section-title-wrap">
           <h2 className="section-title">Skills</h2>
           <p className="section-subtitle">TECHNICAL EXPERTISE, PROGRAMMING LANGUAGES & DOMAIN CAPABILITIES</p>
-        </div>
-
-        {/* Top Feature: What I do overview with Coding Lottie Animation */}
-        <div
-          className="glass-card"
-          style={{
-            padding: '2.5rem',
-            marginBottom: '2.5rem',
-            border: '1.5px solid var(--border-color)'
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '3rem',
-              flexWrap: 'wrap'
-            }}
-          >
-            {/* Left Column: Coding Person Animation */}
-            <div
-              style={{
-                flex: '1 1 400px',
-                maxWidth: '480px',
-                minWidth: '280px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
-            >
-              <DisplayLottie
-                animationData={codingPersonAnimation}
-                style={{ maxWidth: '440px', width: '100%' }}
-                lottieStyle={{ height: '360px' }}
-              />
-            </div>
-
-            {/* Right Column: What I do Capabilities & Dev Icons */}
-            <div
-              style={{
-                flex: '1 1 500px',
-                minWidth: '300px'
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: 'clamp(1.75rem, 3.2vw, 2.4rem)',
-                  fontWeight: 800,
-                  color: 'var(--text-primary)',
-                  marginBottom: '0.4rem',
-                  lineHeight: 1.2
-                }}
-              >
-                {skillsSection.title}
-              </h3>
-
-              <p
-                style={{
-                  fontSize: '0.92rem',
-                  fontWeight: 600,
-                  color: 'var(--accent-primary)',
-                  letterSpacing: '0.04em',
-                  marginBottom: '1.5rem',
-                  textTransform: 'uppercase'
-                }}
-              >
-                {skillsSection.subTitle}
-              </p>
-
-              {/* Dev Icons strip */}
-              <ul className="dev-icons" style={{ margin: '1rem 0 1.5rem 0' }}>
-                {skillsSection.devIcons.map((skill, index) => (
-                  <li key={index} className="software-skill-inline" title={skill.skillName}>
-                    <i className={skill.fontAwesomeClassname}></i>
-                    <p>{skill.skillName}</p>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Capability Bullets */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
-                {skillsSection.skills.map((skillText, index) => (
-                  <div key={index} className="skills-bullet">
-                    <span className="bullet-icon">⚡</span>
-                    <span style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                      {skillText.replace(/^⚡\s*/, '')}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Category Filter Tabs: All | Frontend | Backend | ... */}
