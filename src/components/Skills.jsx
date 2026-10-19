@@ -18,7 +18,6 @@ export default function Skills() {
       id: "Frontend",
       name: "Frontend",
       title: "Frontend & Full Stack",
-      description: "Developing responsive, accessible, and high-performance user interfaces and real-time client applications.",
       skills: [
         { name: "React 18", icon: "devicon-react-original colored" },
         { name: "HTML", icon: "devicon-html5-plain colored" },
@@ -31,7 +30,6 @@ export default function Skills() {
       id: "Backend",
       name: "Backend",
       title: "Backend & Systems",
-      description: "Engineering scalable backend architectures, high-throughput services, and RESTful APIs.",
       skills: [
         { name: "Node.js", icon: "devicon-nodejs-plain colored" },
         { name: "Express.js", icon: "devicon-express-original" },
@@ -42,7 +40,6 @@ export default function Skills() {
       id: "Languages",
       name: "Languages",
       title: "Programming Languages",
-      description: "Proficient across compiled, interpreted, and scripting languages with strong algorithmic foundations.",
       skills: [
         { name: "Python", icon: "devicon-python-plain colored" },
         { name: "TypeScript", icon: "devicon-typescript-plain colored" },
@@ -56,7 +53,6 @@ export default function Skills() {
       id: "Databases",
       name: "Databases",
       title: "Databases",
-      description: "Relational database schema modeling, indexing, ACID compliance, and document store optimization.",
       skills: [
         { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
         { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
@@ -67,7 +63,6 @@ export default function Skills() {
       id: "Cybersecurity",
       name: "Cybersecurity",
       title: "Cybersecurity & Forensics",
-      description: "Deep packet inspection, network anomaly detection, DNS threat analysis, and secure coding standards.",
       skills: [
         { name: "Network Security", icon: "fa-solid fa-shield-halved", iconColor: "#4f46e5" },
         { name: "Wireshark", image: "/assets/images/wireshark.png" }
@@ -77,7 +72,6 @@ export default function Skills() {
       id: "DevOps & Tools",
       name: "DevOps & Tools",
       title: "DevOps & Tools",
-      description: "CI/CD pipelines and infrastructure tools.",
       skills: [
         { name: "Docker", icon: "devicon-docker-plain colored" },
         { name: "Linux CLI", icon: "devicon-linux-plain colored" },
@@ -250,7 +244,7 @@ export default function Skills() {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     gap: '1rem',
-                    marginBottom: '1rem',
+                    marginBottom: '1.5rem',
                     paddingBottom: '0.75rem',
                     borderBottom: '1px solid var(--border-color)'
                   }}
@@ -279,17 +273,6 @@ export default function Skills() {
                     {activeCategoryData.skills.length} Skills
                   </span>
                 </div>
-
-                <p
-                  style={{
-                    fontSize: '0.94rem',
-                    color: 'var(--text-secondary)',
-                    marginBottom: '1.5rem',
-                    lineHeight: 1.55
-                  }}
-                >
-                  {activeCategoryData.description}
-                </p>
 
                 {/* Grid of Big Logo Tiles */}
                 <div
