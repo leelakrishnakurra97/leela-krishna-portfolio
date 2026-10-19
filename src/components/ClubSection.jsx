@@ -54,7 +54,7 @@ export default function ClubSection() {
                 style={{
                   fontSize: '1.05rem',
                   fontWeight: 600,
-                  color: 'var(--accent-primary)',
+                  color: 'var(--text-primary)',
                   marginBottom: '1.25rem'
                 }}
               >
