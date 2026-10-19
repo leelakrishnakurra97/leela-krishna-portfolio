@@ -287,7 +287,7 @@ export const clubSection = {
   highlights: [
     "Contributed to the development and enhancement of the chapter website, supporting its digital presence and accessibility.",
     "Assisted with website improvements, content integration, and minor technical tasks to ensure a smooth user experience.",
-    "Supported various chapter-related initiatives through technical assistance and web-based contributions."
+    "Supported various chapter-related initiatives through technical assistance."
   ],
   gallery: [
     {
