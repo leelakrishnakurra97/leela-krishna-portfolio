@@ -62,9 +62,7 @@ export default function Contact() {
       <div className="container">
         {/* Section Title Header */}
         <div className="section-title-wrap">
-          <div className="section-badge">
-            <Mail size={14} /> GET IN TOUCH
-          </div>
+
           <h2 className="section-title">
             {contactInfo.title ? contactInfo.title.replace(/[☎️📞]/g, '').trim() : 'Contact Me'}
           </h2>
