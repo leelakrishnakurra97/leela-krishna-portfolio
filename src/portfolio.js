@@ -273,7 +273,7 @@ export const projects = [
       "Role-based dashboards providing personalized views for administrators and residents",
       "Replaced manual paperwork and spreadsheets with secure relational database persistence"
     ],
-    techStack: ["React", "Node.js", "Express.js", "PostgreSQL / Relational SQL", "JWT Auth", "Bcrypt", "Agile"]
+    techStack: ["React", "Node.js", "Express.js", "PostgreSQL", "JWT Auth", "Bcrypt", "Agile"]
   }
 ];
 
