@@ -1,26 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { contactInfo, socialMediaLinks } from '../portfolio';
-import { Mail, Phone, Copy, Check, ArrowUpRight, Send } from 'lucide-react';
+import { Mail, Phone, ArrowUpRight } from 'lucide-react';
 
 export default function Contact() {
-  const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
-
-  const handleCopyEmail = () => {
-    if (contactInfo.email) {
-      navigator.clipboard.writeText(contactInfo.email);
-      setCopiedEmail(true);
-      setTimeout(() => setCopiedEmail(false), 2000);
-    }
-  };
-
-  const handleCopyPhone = () => {
-    if (contactInfo.number) {
-      navigator.clipboard.writeText(contactInfo.number);
-      setCopiedPhone(true);
-      setTimeout(() => setCopiedPhone(false), 2000);
-    }
-  };
 
   const socialChannels = [
     {
@@ -85,112 +67,71 @@ export default function Contact() {
             <div
               className="glass-card"
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                padding: '2rem',
-                gap: '1.5rem'
+                padding: '2rem'
               }}
             >
-              <div>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginBottom: '1.25rem'
+                }}
+              >
                 <div
                   style={{
+                    width: '46px',
+                    height: '46px',
+                    backgroundColor: 'var(--badge-bg)',
+                    border: '1px solid #c7d2fe',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between',
-                    marginBottom: '1.25rem'
+                    justifyContent: 'center',
+                    color: 'var(--accent-primary)'
                   }}
                 >
-                  <div
-                    style={{
-                      width: '46px',
-                      height: '46px',
-                      backgroundColor: 'var(--badge-bg)',
-                      border: '1px solid #c7d2fe',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: 'var(--accent-primary)'
-                    }}
-                  >
-                    <Mail size={22} />
-                  </div>
-                  <span
-                    style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.06em',
-                      textTransform: 'uppercase',
-                      color: 'var(--text-muted)'
-                    }}
-                  >
-                    Direct Email
-                  </span>
+                  <Mail size={22} />
                 </div>
-
-                <h3
+                <span
                   style={{
-                    fontSize: '0.82rem',
+                    fontSize: '0.75rem',
                     fontWeight: 700,
+                    letterSpacing: '0.06em',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    color: 'var(--text-muted)',
-                    marginBottom: '0.35rem'
+                    color: 'var(--text-muted)'
                   }}
                 >
-                  Email Address
-                </h3>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  style={{
-                    fontSize: 'clamp(1rem, 2vw, 1.25rem)',
-                    fontWeight: 600,
-                    color: 'var(--text-primary)',
-                    wordBreak: 'break-all',
-                    display: 'block',
-                    transition: 'color 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-primary)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
-                >
-                  {contactInfo.email}
-                </a>
+                  Direct Email
+                </span>
               </div>
 
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="btn-primary"
-                  style={{
-                    padding: '0.65rem 1.25rem',
-                    fontSize: '0.88rem',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem'
-                  }}
-                >
-                  <Send size={15} /> Send Mail
-                </a>
-                <button
-                  type="button"
-                  onClick={handleCopyEmail}
-                  style={{
-                    padding: '0.65rem 1.15rem',
-                    fontSize: '0.88rem',
-                    fontWeight: 600,
-                    color: copiedEmail ? '#15803d' : 'var(--text-primary)',
-                    backgroundColor: copiedEmail ? '#dcfce7' : '#ffffff',
-                    border: `1.5px solid ${copiedEmail ? '#86efac' : 'var(--border-color)'}`,
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  {copiedEmail ? <Check size={15} /> : <Copy size={15} />}
-                  {copiedEmail ? 'Copied!' : 'Copy'}
-                </button>
-              </div>
+              <h3
+                style={{
+                  fontSize: '0.82rem',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  color: 'var(--text-muted)',
+                  marginBottom: '0.35rem'
+                }}
+              >
+                Email Address
+              </h3>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                style={{
+                  fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+                  fontWeight: 600,
+                  color: 'var(--text-primary)',
+                  wordBreak: 'break-all',
+                  display: 'block',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-primary)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
+              >
+                {contactInfo.email}
+              </a>
             </div>
           )}
 
@@ -199,111 +140,70 @@ export default function Contact() {
             <div
               className="glass-card"
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                padding: '2rem',
-                gap: '1.5rem'
+                padding: '2rem'
               }}
             >
-              <div>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  marginBottom: '1.25rem'
+                }}
+              >
                 <div
                   style={{
+                    width: '46px',
+                    height: '46px',
+                    backgroundColor: 'var(--badge-bg)',
+                    border: '1px solid #c7d2fe',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between',
-                    marginBottom: '1.25rem'
+                    justifyContent: 'center',
+                    color: 'var(--accent-primary)'
                   }}
                 >
-                  <div
-                    style={{
-                      width: '46px',
-                      height: '46px',
-                      backgroundColor: 'var(--badge-bg)',
-                      border: '1px solid #c7d2fe',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: 'var(--accent-primary)'
-                    }}
-                  >
-                    <Phone size={22} />
-                  </div>
-                  <span
-                    style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.06em',
-                      textTransform: 'uppercase',
-                      color: 'var(--text-muted)'
-                    }}
-                  >
-                    Phone & WhatsApp
-                  </span>
+                  <Phone size={22} />
                 </div>
-
-                <h3
+                <span
                   style={{
-                    fontSize: '0.82rem',
+                    fontSize: '0.75rem',
                     fontWeight: 700,
+                    letterSpacing: '0.06em',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    color: 'var(--text-muted)',
-                    marginBottom: '0.35rem'
+                    color: 'var(--text-muted)'
                   }}
                 >
-                  Call or Message
-                </h3>
-                <a
-                  href={`tel:${contactInfo.number.replace(/\s+/g, '')}`}
-                  style={{
-                    fontSize: 'clamp(1.15rem, 2.2vw, 1.4rem)',
-                    fontWeight: 600,
-                    color: 'var(--text-primary)',
-                    display: 'block',
-                    transition: 'color 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-primary)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
-                >
-                  {contactInfo.number}
-                </a>
+                  Phone & WhatsApp
+                </span>
               </div>
 
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                <a
-                  href={`tel:${contactInfo.number.replace(/\s+/g, '')}`}
-                  className="btn-primary"
-                  style={{
-                    padding: '0.65rem 1.25rem',
-                    fontSize: '0.88rem',
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem'
-                  }}
-                >
-                  <Phone size={15} /> Call Now
-                </a>
-                <button
-                  type="button"
-                  onClick={handleCopyPhone}
-                  style={{
-                    padding: '0.65rem 1.15rem',
-                    fontSize: '0.88rem',
-                    fontWeight: 600,
-                    color: copiedPhone ? '#15803d' : 'var(--text-primary)',
-                    backgroundColor: copiedPhone ? '#dcfce7' : '#ffffff',
-                    border: `1.5px solid ${copiedPhone ? '#86efac' : 'var(--border-color)'}`,
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  {copiedPhone ? <Check size={15} /> : <Copy size={15} />}
-                  {copiedPhone ? 'Copied!' : 'Copy'}
-                </button>
-              </div>
+              <h3
+                style={{
+                  fontSize: '0.82rem',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  color: 'var(--text-muted)',
+                  marginBottom: '0.35rem'
+                }}
+              >
+                Call or Message
+              </h3>
+              <a
+                href={`tel:${contactInfo.number.replace(/\s+/g, '')}`}
+                style={{
+                  fontSize: 'clamp(1.15rem, 2.2vw, 1.4rem)',
+                  fontWeight: 600,
+                  color: 'var(--text-primary)',
+                  display: 'block',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-primary)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-primary)')}
+              >
+                {contactInfo.number}
+              </a>
             </div>
           )}
 
