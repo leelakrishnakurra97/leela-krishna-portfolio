@@ -1,35 +1,11 @@
 import React from 'react';
-import { ShieldCheck, Cloud, Terminal, CheckCircle2, Sparkles } from 'lucide-react';
+import { Terminal, CheckCircle2 } from 'lucide-react';
 
 export default function HeroAnimation() {
   return (
     <div className="hero-anim-wrapper">
       {/* Background Ambient Glow */}
       <div className="ambient-glow" />
-
-      {/* Floating Badge 1: React 18 */}
-      <div className="float-badge badge-react">
-        <i className="devicon-react-original colored" style={{ fontSize: '1.4rem' }}></i>
-        <span>React 18 & Vite</span>
-      </div>
-
-      {/* Floating Badge 2: Python / AI */}
-      <div className="float-badge badge-python">
-        <i className="devicon-python-plain colored" style={{ fontSize: '1.4rem' }}></i>
-        <span>Python & FastAPI</span>
-      </div>
-
-      {/* Floating Badge 3: Cyber Security / Network Forensics */}
-      <div className="float-badge badge-security">
-        <ShieldCheck size={20} color="#a855f7" />
-        <span>DNS Threat Forensics</span>
-      </div>
-
-      {/* Floating Badge 4: Cloud & DevOps */}
-      <div className="float-badge badge-cloud">
-        <Cloud size={20} color="#38bdf8" />
-        <span>Azure & AWS Cloud</span>
-      </div>
 
       {/* Main IDE Terminal Window */}
       <div className="ide-window">
@@ -63,7 +39,6 @@ export default function HeroAnimation() {
             <span>06</span>
             <span>07</span>
             <span>08</span>
-            <span>09</span>
           </div>
 
           <div className="code-lines">
@@ -87,9 +62,6 @@ export default function HeroAnimation() {
             </div>
             <div className="code-row ind-2">
               <span className="kw">return await</span> <span className="cls">AI_Anomaly_Engine</span>.<span className="fn">scan</span>(pcap)
-            </div>
-            <div className="code-row ind-1">
-              <span className="cmt"># Anomaly accuracy: 99.91% recall</span>
             </div>
             <div className="code-row ind-1 typing-line">
               <span className="prompt">&gt;&gt;&gt;</span> <span className="cmd">deploy_production()</span>
@@ -295,70 +267,7 @@ export default function HeroAnimation() {
           gap: 6px;
         }
 
-        /* Floating Badges */
-        .float-badge {
-          position: absolute;
-          z-index: 3;
-          display: flex;
-          align-items: center;
-          gap: 0.55rem;
-          background: #ffffff;
-          border: 1.5px solid var(--border-color);
-          padding: 0.5rem 0.9rem;
-          border-radius: 0px;
-          font-size: 0.82rem;
-          font-weight: 700;
-          color: var(--text-primary);
-          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
-          pointer-events: none;
-        }
-
-        .badge-react {
-          top: -18px;
-          left: -20px;
-          animation: floatReact 4s ease-in-out infinite;
-        }
-
-        .badge-python {
-          top: -15px;
-          right: -20px;
-          animation: floatPython 4.5s ease-in-out infinite;
-        }
-
-        .badge-security {
-          bottom: 25px;
-          left: -30px;
-          animation: floatSec 3.8s ease-in-out infinite;
-        }
-
-        .badge-cloud {
-          bottom: -15px;
-          right: -15px;
-          animation: floatCloud 4.2s ease-in-out infinite;
-        }
-
-        @keyframes floatReact {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-8px) rotate(-1.5deg); }
-        }
-
-        @keyframes floatPython {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(1.5deg); }
-        }
-
-        @keyframes floatSec {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-7px) rotate(-1deg); }
-        }
-
-        @keyframes floatCloud {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-9px) rotate(1.2deg); }
-        }
-
         @media (max-width: 640px) {
-          .float-badge { display: none; }
           .hero-anim-wrapper { min-height: auto; }
         }
       `}</style>
