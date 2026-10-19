@@ -186,8 +186,8 @@ export const workExperiences = {
         },
         {
           src: "/assets/images/copter_code/Second_img.jpeg",
-          title: "Engineering Cohort",
-          caption: "Full-Stack Developer interns at Copter Code, Chennai"
+          title: "LMS Engineering Team",
+          caption: "Full-Stack Developer team building the enterprise LMS at Copter Code, Chennai"
         },
         {
           src: "/assets/images/copter_code/Third_image.jpeg",
