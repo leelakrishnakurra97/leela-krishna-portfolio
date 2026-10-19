@@ -239,7 +239,8 @@ export default function Projects() {
                   ) : project.id === 'netsentinel' ? (
                     <div
                       style={{
-                        height: '56px',
+                        width: '68px',
+                        height: '68px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -247,16 +248,15 @@ export default function Projects() {
                         border: '1.5px solid #1e293b',
                         borderRadius: '0px',
                         overflow: 'hidden',
-                        backgroundColor: '#090e17'
+                        backgroundColor: '#050914'
                       }}
                     >
                       <img
-                        src="/assets/projects/netsentinel_header_logo.png"
+                        src="/assets/projects/netsentinel_logo.png"
                         alt="NetSentinel DNS Threat Intelligence"
                         style={{
-                          height: '56px',
-                          width: 'auto',
-                          maxHeight: '100%',
+                          width: '100%',
+                          height: '100%',
                           objectFit: 'contain',
                           display: 'block'
                         }}
