@@ -294,14 +294,14 @@ export const clubSection = {
   ],
   gallery: [
     {
-      src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.21 (2).jpeg",
-      title: "IEEE ITS Official Banner Creation",
-      caption: "Crafting the official IEEE Information Theory Society hand-painted banner for university technical events."
-    },
-    {
       src: "/assets/club/Screenshot 2026-10-18 144757.png",
       title: "IEEE ITS Chapter Core Team",
       caption: "Group snapshot of the IEEE ITS chapter members, student leads, and event coordinators at VIT Vellore."
+    },
+    {
+      src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.21 (2).jpeg",
+      title: "IEEE ITS Official Banner Creation",
+      caption: "Crafting the official IEEE Information Theory Society hand-painted banner for university technical events."
     },
     {
       src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.17 (1).jpeg",
