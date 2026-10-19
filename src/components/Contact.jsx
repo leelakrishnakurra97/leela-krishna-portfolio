@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { contactInfo, socialMediaLinks, greeting } from '../portfolio';
-import { Mail, Phone, MapPin, Copy, Check, ExternalLink, ArrowUpRight, Send, MessageSquare } from 'lucide-react';
+import { contactInfo, socialMediaLinks } from '../portfolio';
+import { Mail, Phone, Copy, Check, ArrowUpRight, Send } from 'lucide-react';
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -307,109 +307,7 @@ export default function Contact() {
             </div>
           )}
 
-          {/* Location & Availability Card */}
-          <div
-            className="glass-card"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              padding: '2rem',
-              gap: '1.5rem'
-            }}
-          >
-            <div>
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  marginBottom: '1.25rem'
-                }}
-              >
-                <div
-                  style={{
-                    width: '46px',
-                    height: '46px',
-                    backgroundColor: 'var(--badge-bg)',
-                    border: '1px solid #c7d2fe',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'var(--accent-primary)'
-                  }}
-                >
-                  <MapPin size={22} />
-                </div>
-                <span
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    padding: '0.3rem 0.65rem',
-                    backgroundColor: '#dcfce7',
-                    color: '#15803d',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    letterSpacing: '0.04em',
-                    border: '1px solid #bbf7d0'
-                  }}
-                >
-                  <span
-                    style={{
-                      width: '6px',
-                      height: '6px',
-                      borderRadius: '50%',
-                      backgroundColor: '#22c55e',
-                      display: 'inline-block'
-                    }}
-                  />
-                  ACTIVE
-                </span>
-              </div>
 
-              <h3
-                style={{
-                  fontSize: '0.82rem',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  color: 'var(--text-muted)',
-                  marginBottom: '0.35rem'
-                }}
-              >
-                Location & Status
-              </h3>
-              <div
-                style={{
-                  fontSize: 'clamp(1rem, 2vw, 1.25rem)',
-                  fontWeight: 600,
-                  color: 'var(--text-primary)',
-                  marginBottom: '0.4rem'
-                }}
-              >
-                {contactInfo.location || 'Vellore, Tamil Nadu, India'}
-              </div>
-              <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: 0 }}>
-                {greeting.statusText || 'Open to Software Developer, Full-Stack & Cybersecurity Roles'}
-              </p>
-            </div>
-
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <span
-                style={{
-                  fontSize: '0.82rem',
-                  fontWeight: 600,
-                  color: 'var(--accent-primary)',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.4rem'
-                }}
-              >
-                <MessageSquare size={14} /> Open to Discussions & Collaboration
-              </span>
-            </div>
-          </div>
         </div>
 
         {/* Social & Developer Profiles Container */}
