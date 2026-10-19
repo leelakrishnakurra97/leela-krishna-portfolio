@@ -70,7 +70,7 @@ export default function Skills() {
       description: "Deep packet inspection, network anomaly detection, DNS threat analysis, and secure coding standards.",
       skills: [
         { name: "Network Security", icon: "fa-solid fa-shield-halved", iconColor: "#4f46e5" },
-        { name: "Wireshark", icon: "fa-solid fa-network-wired", iconColor: "#0284c7" }
+        { name: "Wireshark", image: "/assets/images/wireshark.png" }
       ]
     },
     {
@@ -142,7 +142,18 @@ export default function Skills() {
           marginBottom: '0.65rem'
         }}
       >
-        {skill.customIcon ? (
+        {skill.image ? (
+          <img
+            src={skill.image}
+            alt={skill.name}
+            style={{
+              height: '46px',
+              width: '46px',
+              objectFit: 'contain',
+              display: 'block'
+            }}
+          />
+        ) : skill.customIcon ? (
           skill.customIcon
         ) : (
           <i

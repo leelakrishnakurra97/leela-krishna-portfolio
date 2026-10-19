@@ -104,7 +104,7 @@ export const skillsSection = {
     { skillName: "MySQL", iconClass: "devicon-mysql-plain colored", category: "Databases" },
     { skillName: "Docker", iconClass: "devicon-docker-plain colored", category: "DevOps & Tools" },
     { skillName: "Linux", iconClass: "devicon-linux-plain colored", category: "DevOps & Tools" },
-    { skillName: "Wireshark", iconClass: "fa-solid fa-network-wired", category: "Cybersecurity" },
+    { skillName: "Wireshark", image: "/assets/images/wireshark.png", category: "Cybersecurity" },
     { skillName: "Network Security", iconClass: "fa-solid fa-shield-halved", category: "Cybersecurity" },
     { skillName: "Pandas", iconClass: "devicon-pandas-plain colored", category: "Data Science" },
     { skillName: "Scikit-Learn", iconClass: "devicon-scikitlearn-plain colored", category: "Data Science" },
@@ -112,7 +112,7 @@ export const skillsSection = {
     { skillName: "GitHub", iconClass: "devicon-github-original", category: "Tools" },
     { skillName: "Linux CLI", iconClass: "devicon-linux-plain colored", category: "Tools" },
     { skillName: "Docker Engine", iconClass: "devicon-docker-plain colored", category: "Tools" },
-    { skillName: "Wireshark Packet Analysis", iconClass: "fa-solid fa-network-wired", category: "Tools" }
+    { skillName: "Wireshark Packet Analysis", image: "/assets/images/wireshark.png", category: "Tools" }
   ],
   display: true
 };
