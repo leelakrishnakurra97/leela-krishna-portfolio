@@ -68,21 +68,6 @@ export default function Contact() {
             />
           </h1>
 
-          <p
-            style={{
-              fontSize: '1rem',
-              fontWeight: 500,
-              color: '#868e96',
-              textTransform: 'uppercase',
-              letterSpacing: '0.04em',
-              lineHeight: 1.6,
-              marginBottom: '2.25rem',
-              maxWidth: '680px'
-            }}
-          >
-            {contactInfo.subTitle}
-          </p>
-
           <div style={{ marginBottom: '2.25rem' }}>
             {contactInfo.number && (
               <a

@@ -407,7 +407,6 @@ export const codingProfiles = {
 export const contactInfo = {
   title: "Contact Me",
   callIcon: "/assets/images/black-call-icon-png.png",
-  subTitle: "DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL.",
   number: "+91-9000274859",
   email: "leelakrishna.kurra7@gmail.com",
   location: "Vellore, Tamil Nadu 632014, India"
