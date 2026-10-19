@@ -208,7 +208,7 @@ export const projects = [
   {
     id: "lms",
     category: "Full Stack",
-    title: "EduVerse - Enterprise Learning Management System",
+    title: "Nexora Learning - Enterprise Learning Management System",
     subtitle: "Full-Stack LMS with AI Tutoring & LiveKit WebRTC Virtual Classrooms",
     repoName: "learning-management-system",
     github: "https://github.com/leelakrishnakurra97/learning-management-system",
