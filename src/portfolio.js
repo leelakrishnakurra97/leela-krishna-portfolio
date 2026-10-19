@@ -23,6 +23,7 @@ export const socialMediaLinks = {
   github: "https://github.com/leelakrishnakurra97",
   linkedin: "https://www.linkedin.com/in/leela-krishna-kurra",
   leetcode: "https://leetcode.com/u/leelakrishna_101/",
+  instagram: "https://www.instagram.com/leelakrishna_123/?utm_source=ig_web_button_share_sheet",
   email: "mailto:leelakrishna.kurra7@gmail.com",
   display: true
 };

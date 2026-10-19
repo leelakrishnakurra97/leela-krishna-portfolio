@@ -97,17 +97,20 @@ export default function Footer() {
             </a>
 
             <a
-              href={`mailto:${greeting.email}`}
-              aria-label="Email"
+              href={socialMediaLinks.instagram}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
               style={{
                 fontSize: '1.3rem',
                 color: 'var(--text-secondary)',
                 transition: 'color 0.2s ease'
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent-primary)')}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#e1306c')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-secondary)')}
+              title="Instagram Profile"
             >
-              <i className="fa-solid fa-envelope"></i>
+              <i className="fa-brands fa-instagram"></i>
             </a>
           </div>
 

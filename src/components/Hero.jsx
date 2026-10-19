@@ -234,10 +234,12 @@ export default function Hero() {
                 <i className="fa-solid fa-code"></i>
               </a>
 
-              {/* Email */}
+              {/* Instagram */}
               <a
-                href={`mailto:${greeting.email}`}
-                aria-label="Send Email"
+                href={socialMediaLinks.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram Profile"
                 style={{
                   width: '44px',
                   height: '44px',
@@ -252,16 +254,16 @@ export default function Hero() {
                   transition: 'all 0.2s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--accent-primary)';
-                  e.currentTarget.style.color = 'var(--accent-primary)';
+                  e.currentTarget.style.borderColor = '#e1306c';
+                  e.currentTarget.style.color = '#e1306c';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = 'var(--border-color)';
                   e.currentTarget.style.color = 'var(--text-primary)';
                 }}
-                title="Email Me"
+                title="Instagram Profile"
               >
-                <i className="fa-solid fa-envelope"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
           </div>

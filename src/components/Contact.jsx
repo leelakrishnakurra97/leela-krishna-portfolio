@@ -18,11 +18,11 @@ export default function Contact() {
       show: Boolean(socialMediaLinks.linkedin)
     },
     {
-      name: 'Email',
-      icon: 'fa-solid fa-envelope',
-      url: `mailto:${contactInfo.email}`,
-      bgColor: '#ea4335',
-      show: Boolean(contactInfo.email)
+      name: 'Instagram',
+      icon: 'fa-brands fa-instagram',
+      url: socialMediaLinks.instagram,
+      bgColor: '#e1306c',
+      show: Boolean(socialMediaLinks.instagram)
     },
     {
       name: 'LeetCode',
