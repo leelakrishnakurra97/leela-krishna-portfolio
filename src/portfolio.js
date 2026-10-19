@@ -295,7 +295,7 @@ export const clubSection = {
   gallery: [
     {
       src: "/assets/club/Screenshot 2026-10-18 144757.png",
-      title: "IEEE ITS Chapter Core Team",
+      title: "IEEE ITS Chapter Team",
       caption: "Group snapshot of the IEEE ITS chapter members, student leads, and event coordinators at VIT Vellore."
     },
     {
