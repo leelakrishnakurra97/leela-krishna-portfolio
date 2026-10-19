@@ -45,7 +45,7 @@ export default function HeroAnimation() {
               <span className="self">self</span>.name = <span className="str">"Kurra Leela Krishna"</span>
             </div>
             <div className="code-row ind-2">
-              <span className="self">self</span>.focus = [<span className="str">"Full-Stack"</span>, <span className="str">"CyberSecurity"</span>]
+              <span className="self">self</span>.branch = [<span className="str">"CSE(Cyber Security)"</span>]
             </div>
             <div className="code-row ind-2">
               <span className="self">self</span>.status = <span className="str">"Open to Opportunities"</span>
