@@ -21,11 +21,6 @@ export default function HeroAnimation() {
             <i className="devicon-python-plain colored" style={{ fontSize: '1rem', marginRight: '6px' }}></i>
             <span className="tab-title">engineer_profile.py</span>
           </div>
-
-          <div className="status-indicator">
-            <span className="pulse-green" />
-            <span className="status-text">LIVE</span>
-          </div>
         </div>
 
         {/* Code Body */}
@@ -137,7 +132,7 @@ export default function HeroAnimation() {
           padding: 0.65rem 1rem;
           display: flex;
           align-items: center;
-          justifyContent: space-between;
+          gap: 1rem;
           border-bottom: 1.5px solid #334155;
         }
 
@@ -169,30 +164,6 @@ export default function HeroAnimation() {
           font-size: 0.8rem;
           color: #e2e8f0;
           font-weight: 500;
-        }
-
-        .status-indicator {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 0.72rem;
-          font-weight: 700;
-          color: #10b981;
-          letter-spacing: 0.05em;
-        }
-
-        .pulse-green {
-          width: 7px;
-          height: 7px;
-          background: #10b981;
-          border-radius: 50%;
-          box-shadow: 0 0 8px #10b981;
-          animation: pulseGreen 1.5s infinite;
-        }
-
-        @keyframes pulseGreen {
-          0%, 100% { opacity: 1; transform: scale(1); }
-          50% { opacity: 0.4; transform: scale(0.85); }
         }
 
         /* Code Content */
