@@ -317,11 +317,6 @@ export const clubSection = {
       src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.26.jpeg",
       title: "Event Organizing Committee",
       caption: "Coordinating logistics, student registrations, and tech booth operations with fellow IEEE ITS organizers."
-    },
-    {
-      src: "/assets/club/Screenshot 2026-10-18 145914.png",
-      title: "Team Fellowship & Milestone Celebration",
-      caption: "Core members gathering after successfully wrapping up flagship technical symposiums."
     }
   ]
 };
