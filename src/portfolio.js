@@ -305,7 +305,7 @@ export const clubSection = {
     },
     {
       src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.17 (1).jpeg",
-      title: "Technical Seminar & Workshop Auditorium",
+      title: "Technical Seminar",
       caption: "Hands-on tech session and seminar conducted in the campus auditorium for university students."
     },
     {
