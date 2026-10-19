@@ -65,7 +65,7 @@ export default function Skills() {
       title: "Cybersecurity & Forensics",
       skills: [
         { name: "Network Security", icon: "fa-solid fa-shield-halved", iconColor: "#4f46e5" },
-        { name: "Wireshark", image: "/assets/images/wireshark.png" }
+        { name: "Wireshark", image: "./assets/images/wireshark.png" }
       ]
     },
     {

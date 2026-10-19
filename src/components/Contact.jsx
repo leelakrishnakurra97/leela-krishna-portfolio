@@ -56,7 +56,7 @@ export default function Contact() {
             <span>{contactInfo.title ? contactInfo.title.replace('☎️', '').trim() : 'Contact Me'}</span>
             <img
               className="contact-call-icon"
-              src="/assets/images/black-call-icon-png.png"
+              src="./assets/images/black-call-icon-png.png"
               alt="Phone"
               style={{
                 width: 'clamp(2.2rem, 4.6vw, 3.4rem)',
@@ -142,7 +142,7 @@ export default function Contact() {
                   key={item.name}
                   href={item.url}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={item.name}
                   title={item.name}
                   style={{

@@ -199,7 +199,7 @@ export default function Projects() {
                       }}
                     >
                       <img
-                        src="/assets/projects/play_horizon_logo.png"
+                        src="./assets/projects/play_horizon_logo.png"
                         alt="Play Horizon"
                         style={{
                           height: '58px',
@@ -227,7 +227,7 @@ export default function Projects() {
                       }}
                     >
                       <img
-                        src="/assets/projects/smart_society_logo.png"
+                        src="./assets/projects/smart_society_logo.png"
                         alt="Smart Society Management System"
                         style={{
                           width: '100%',
@@ -253,7 +253,7 @@ export default function Projects() {
                       }}
                     >
                       <img
-                        src="/assets/projects/netsentinel_logo.png"
+                        src="./assets/projects/netsentinel_logo.png"
                         alt="NetSentinel DNS Threat Intelligence"
                         style={{
                           width: '100%',
@@ -382,7 +382,7 @@ export default function Projects() {
                   <a
                     href={project.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',
@@ -407,7 +407,7 @@ export default function Projects() {
                   <a
                     href={project.liveDemo}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',

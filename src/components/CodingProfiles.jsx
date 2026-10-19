@@ -52,7 +52,7 @@ export default function CodingProfiles() {
               <a
                 href={codingProfiles.leetcode.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="btn-primary"
                 style={{
                   padding: '0.55rem 1.15rem',
@@ -97,7 +97,7 @@ export default function CodingProfiles() {
               <a
                 href={codingProfiles.github.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="btn-primary"
                 style={{
                   padding: '0.55rem 1.15rem',

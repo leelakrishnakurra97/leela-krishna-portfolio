@@ -84,7 +84,7 @@ export default function LightboxModal({
               <a
                 href={currentItem.src}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 style={{
                   color: 'var(--text-secondary)',
                   display: 'flex',

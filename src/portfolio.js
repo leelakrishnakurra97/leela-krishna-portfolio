@@ -9,7 +9,7 @@ export const greeting = {
   title: "Hello, I'm Leela Krishna",
   subTitle:
     "Motivated Computer Science (Cyber Security) undergraduate at VIT Vellore. Interested in programming, software development, and network security. Focused on building technical skills through hands-on projects, continuous learning, and practical experience.",
-  resumeLink: "/assets/docs/Kurra_Leela_Krishna_Resume.pdf",
+  resumeLink: "./assets/docs/Kurra_Leela_Krishna_Resume.pdf",
   resumeDriveLink:
     "https://drive.google.com/file/d/1EC4-3kT1pb1PxATGwxb35gnsiiGgkoQ7/view?usp=drive_link",
   location: "Vellore, Tamil Nadu 632014, India",
@@ -30,11 +30,11 @@ export const socialMediaLinks = {
 
 export const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL-STACK DEVELOPER & CYBERSECURITY SPECIALIST FOCUSING ON HIGH-PERFORMANCE PLATFORMS",
   skills: [
-    "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications",
-    "⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks",
-    "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+    "⚡ Designing and architecting high-performance full-stack web applications with React, TypeScript, and FastAPI / Node.js",
+    "⚡ Engineering network threat detection systems, DNS anomaly intelligence, and deep packet inspection (PCAP)",
+    "⚡ Cloud infrastructure orchestration, Azure AZ-104 administration, and Docker containerized deployments"
   ],
   devIcons: [
     { skillName: "html-5", fontAwesomeClassname: "fa-brands fa-html5" },
@@ -104,7 +104,7 @@ export const skillsSection = {
     { skillName: "MySQL", iconClass: "devicon-mysql-plain colored", category: "Databases" },
     { skillName: "Docker", iconClass: "devicon-docker-plain colored", category: "DevOps & Tools" },
     { skillName: "Linux", iconClass: "devicon-linux-plain colored", category: "DevOps & Tools" },
-    { skillName: "Wireshark", image: "/assets/images/wireshark.png", category: "Cybersecurity" },
+    { skillName: "Wireshark", image: "./assets/images/wireshark.png", category: "Cybersecurity" },
     { skillName: "Network Security", iconClass: "fa-solid fa-shield-halved", category: "Cybersecurity" },
     { skillName: "Pandas", iconClass: "devicon-pandas-plain colored", category: "Data Science" },
     { skillName: "Scikit-Learn", iconClass: "devicon-scikitlearn-plain colored", category: "Data Science" },
@@ -112,7 +112,7 @@ export const skillsSection = {
     { skillName: "GitHub", iconClass: "devicon-github-original", category: "Tools" },
     { skillName: "Linux CLI", iconClass: "devicon-linux-plain colored", category: "Tools" },
     { skillName: "Docker Engine", iconClass: "devicon-docker-plain colored", category: "Tools" },
-    { skillName: "Wireshark Packet Analysis", image: "/assets/images/wireshark.png", category: "Tools" }
+    { skillName: "Wireshark Packet Analysis", image: "./assets/images/wireshark.png", category: "Tools" }
   ],
   display: true
 };
@@ -133,7 +133,7 @@ export const educationInfo = {
   schools: [
     {
       schoolName: "Vellore Institute of Technology (VIT), Vellore",
-      logo: "/assets/images/vit_logo.png",
+      logo: "./assets/images/vit_logo.png",
       subHeader: "Bachelor of Technology (B.Tech) - Computer Science and Engineering (Cyber Security)",
       duration: "2024 – 2028 (3rd Year)",
       grade: "CGPA: 9.16 / 10",
@@ -141,7 +141,7 @@ export const educationInfo = {
     },
     {
       schoolName: "Sri Chaitanya Junior College",
-      logo: "/assets/images/sri_chaitanya.png",
+      logo: "./assets/images/sri_chaitanya.png",
       subHeader: "Senior Secondary (Class XII) - MPC • Telangana State Board",
       duration: "Completed 2024",
       grade: "Percentage: 94.90%",
@@ -150,7 +150,7 @@ export const educationInfo = {
     },
     {
       schoolName: "Geetanjali Olympiad School",
-      logo: "/assets/images/GEETANJALI_OLYMPIAD_SCHOOL_LOGO.png",
+      logo: "./assets/images/GEETANJALI_OLYMPIAD_SCHOOL_LOGO.png",
       subHeader: "Secondary Education (Class X)",
       duration: "Completed 2022",
       grade: "Percentage: 92.00%",
@@ -178,22 +178,22 @@ export const workExperiences = {
       techPills: ["React", "TypeScript", "Node.js", "Express", "Prisma ORM", "PostgreSQL", "LiveKit WebRTC", "JWT", "Docker"],
       images: [
         {
-          src: "/assets/images/copter_code/First_image.jpeg",
+          src: "./assets/images/copter_code/First_image.jpeg",
           title: "IITM Research Park",
           caption: "Internship cohort at the IIT Madras Research Park campus"
         },
         {
-          src: "/assets/images/copter_code/Second_img.jpeg",
+          src: "./assets/images/copter_code/Second_img.jpeg",
           title: "LMS Engineering Team",
           caption: "Full-Stack Developer team building the enterprise LMS at Copter Code, Chennai"
         },
         {
-          src: "/assets/images/copter_code/Third_image.jpeg",
+          src: "./assets/images/copter_code/Third_image.jpeg",
           title: "Engineering Floor",
           caption: "Developing core LMS architecture & real-time WebRTC communications"
         },
         {
-          src: "/assets/images/copter_code/Fourth_img.jpeg",
+          src: "./assets/images/copter_code/Fourth_img.jpeg",
           title: "Team",
           caption: ""
         }
@@ -207,7 +207,7 @@ export const projects = [
     id: "lms",
     category: "Full Stack",
     title: "Nexora Learning - Enterprise Learning Management System",
-    subtitle: "Full-Stack LMS with AI Tutoring & LiveKit WebRTC Virtual Classrooms",
+    subtitle: "Full-Stack LMS with LiveKit WebRTC Virtual Classrooms & Telemetry",
     repoName: "learning-management-system",
     github: "https://github.com/leelakrishnakurra97/learning-management-system",
     liveDemo: "https://github.com/leelakrishnakurra97/learning-management-system",
@@ -217,7 +217,7 @@ export const projects = [
       "Interactive low-latency WebRTC video classrooms with screen sharing via LiveKit",
       "Comprehensive quiz engines, automated grading, and student progress telemetry"
     ],
-    techStack: ["TypeScript 5.6", "React 18", "Vite", "Node.js", "Express", "Prisma ORM", "PostgreSQL 16", "LiveKit WebRTC", "Gemini AI", "Docker"]
+    techStack: ["TypeScript 5.6", "React 18", "Vite", "Node.js", "Express", "Prisma ORM", "PostgreSQL 16", "LiveKit WebRTC", "REST APIs", "Docker"]
   },
   {
     id: "netsentinel",
@@ -290,27 +290,27 @@ export const clubSection = {
   ],
   gallery: [
     {
-      src: "/assets/club/Screenshot 2026-10-18 144757.png",
+      src: "./assets/club/Screenshot 2026-10-18 144757.png",
       title: "IEEE ITS Chapter Team",
       caption: "Group snapshot of the IEEE ITS chapter members, student leads, and event coordinators at VIT Vellore."
     },
     {
-      src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.21 (2).jpeg",
+      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.21 (2).jpeg",
       title: "IEEE ITS Official Banner Creation",
       caption: "Crafting the official IEEE Information Theory Society hand-painted banner for university technical events."
     },
     {
-      src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.17 (1).jpeg",
+      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.17 (1).jpeg",
       title: "Technical Seminar",
       caption: "Hands-on tech session and seminar conducted in the campus auditorium for university students."
     },
     {
-      src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.24 (2).jpeg",
+      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.24 (2).jpeg",
       title: "Technical Outreach & Interactive Booth",
       caption: "Engaging students with interactive sessions."
     },
     {
-      src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.26.jpeg",
+      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.26.jpeg",
       title: "Event Organizing Committee",
       caption: "Coordinating logistics, student registrations, and tech booth operations with fellow IEEE ITS organizers."
     }
@@ -325,9 +325,9 @@ export const certificationsSection = {
       title: "Microsoft Certified: Azure Administrator",
       subtitle:
         "Earned Microsoft Certified Azure Administrator Associate (AZ-104) validating expert skills in Azure compute, virtual networking, storage, Entra ID governance, and telemetry.",
-      image: "/assets/certifications/azure_badge.png",
+      image: "./assets/certifications/azure_badge.png",
       imageAlt: "Microsoft Azure Administrator Associate Badge",
-      pdfUrl: "/assets/certifications/azure_administrator_associate_cert.pdf",
+      pdfUrl: "./assets/certifications/azure_administrator_associate_cert.pdf",
       verifyUrl:
         "https://learn.microsoft.com/en-us/users/leelakrishnakurra-1673/credentials/certification/azure-administrator?source=docs&tab=credentials-tab",
       footer: [
@@ -338,7 +338,7 @@ export const certificationsSection = {
         },
         {
           name: "View PDF",
-          url: "/assets/certifications/azure_administrator_associate_cert.pdf",
+          url: "./assets/certifications/azure_administrator_associate_cert.pdf",
           isPdf: true
         }
       ]
@@ -347,9 +347,9 @@ export const certificationsSection = {
       title: "AWS Academy Graduate - Cloud Foundations",
       subtitle:
         "Completed comprehensive AWS Academy training covering AWS global cloud architecture, IAM security, Amazon EC2, VPC networking, S3 storage, and cloud economics.",
-      image: "/assets/certifications/aws_badge.png",
+      image: "./assets/certifications/aws_badge.png",
       imageAlt: "AWS Academy Cloud Foundations Badge",
-      pdfUrl: "/assets/certifications/aws_cloud_foundations_cert.pdf",
+      pdfUrl: "./assets/certifications/aws_cloud_foundations_cert.pdf",
       verifyUrl: "https://www.credly.com/go/MPHZhGIE",
       footer: [
         {
@@ -359,7 +359,7 @@ export const certificationsSection = {
         },
         {
           name: "View PDF",
-          url: "/assets/certifications/aws_cloud_foundations_cert.pdf",
+          url: "./assets/certifications/aws_cloud_foundations_cert.pdf",
           isPdf: true
         }
       ]
@@ -368,7 +368,7 @@ export const certificationsSection = {
       title: "IEEE ITS Chapter Technical Coordinator",
       subtitle:
         "Elected technical events coordinator and core contributor at IEEE Information Theory Society (VIT Vellore), organizing university technical symposiums, hands-on workshops, and coding challenges.",
-      image: "/assets/images/ieee_its_logo.png",
+      image: "./assets/images/ieee_its_logo.png",
       imageAlt: "IEEE Information Theory Society Logo",
       footer: [
         {
@@ -404,7 +404,7 @@ export const codingProfiles = {
 
 export const contactInfo = {
   title: "Contact Me",
-  callIcon: "/assets/images/black-call-icon-png.png",
+  callIcon: "./assets/images/black-call-icon-png.png",
   number: "+91-9000274859",
   email: "leelakrishna.kurra7@gmail.com",
   location: "Vellore, Tamil Nadu 632014, India"

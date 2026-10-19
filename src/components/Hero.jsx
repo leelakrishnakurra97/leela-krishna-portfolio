@@ -147,7 +147,7 @@ export default function Hero() {
               <a
                 href={socialMediaLinks.github}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="GitHub Profile"
                 style={{
                   width: '44px',
@@ -179,7 +179,7 @@ export default function Hero() {
               <a
                 href={socialMediaLinks.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
                 style={{
                   width: '44px',
@@ -211,7 +211,7 @@ export default function Hero() {
               <a
                 href={socialMediaLinks.leetcode}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="LeetCode Profile"
                 style={{
                   width: '44px',
@@ -243,7 +243,7 @@ export default function Hero() {
               <a
                 href={socialMediaLinks.instagram}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Instagram Profile"
                 style={{
                   width: '44px',

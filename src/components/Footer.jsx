@@ -51,7 +51,7 @@ export default function Footer() {
             <a
               href={socialMediaLinks.github}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="GitHub"
               style={{
                 fontSize: '1.3rem',
@@ -67,7 +67,7 @@ export default function Footer() {
             <a
               href={socialMediaLinks.linkedin}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               style={{
                 fontSize: '1.3rem',
@@ -83,7 +83,7 @@ export default function Footer() {
             <a
               href={socialMediaLinks.leetcode}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="LeetCode"
               style={{
                 fontSize: '1.3rem',
@@ -99,7 +99,7 @@ export default function Footer() {
             <a
               href={socialMediaLinks.instagram}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               style={{
                 fontSize: '1.3rem',
