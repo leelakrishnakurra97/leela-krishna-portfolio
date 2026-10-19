@@ -183,6 +183,32 @@ export default function Projects() {
                     >
                       <NexoraPlanetLogo size={58} />
                     </div>
+                  ) : project.id === 'play-horizon' ? (
+                    <div
+                      style={{
+                        height: '58px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        border: '1.5px solid var(--border-color)',
+                        borderRadius: '0px',
+                        overflow: 'hidden',
+                        backgroundColor: '#ffffff'
+                      }}
+                    >
+                      <img
+                        src="/assets/projects/play_horizon_logo.png"
+                        alt="Play Horizon"
+                        style={{
+                          height: '58px',
+                          width: 'auto',
+                          maxHeight: '100%',
+                          objectFit: 'contain',
+                          display: 'block'
+                        }}
+                      />
+                    </div>
                   ) : (
                     <div
                       style={{
