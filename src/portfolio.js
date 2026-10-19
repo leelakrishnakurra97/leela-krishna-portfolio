@@ -194,7 +194,7 @@ export const workExperiences = {
         },
         {
           src: "/assets/images/copter_code/Fourth_img.jpeg",
-          title: "Team & Mentors",
+          title: "Team",
           caption: ""
         }
       ]
