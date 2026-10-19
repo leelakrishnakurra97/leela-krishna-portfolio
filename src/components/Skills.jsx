@@ -17,7 +17,7 @@ export default function Skills() {
     {
       id: "Frontend",
       name: "Frontend",
-      title: "Frontend & Full Stack",
+      title: "Frontend",
       skills: [
         { name: "React 18", icon: "devicon-react-original colored" },
         { name: "HTML", icon: "devicon-html5-plain colored" },
