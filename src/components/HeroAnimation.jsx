@@ -32,8 +32,6 @@ export default function HeroAnimation() {
             <span>04</span>
             <span>05</span>
             <span>06</span>
-            <span>07</span>
-            <span>08</span>
           </div>
 
           <div className="code-lines">
@@ -51,12 +49,6 @@ export default function HeroAnimation() {
             </div>
             <div className="code-row ind-2">
               <span className="self">self</span>.status = <span className="str">"Open to Opportunities"</span>
-            </div>
-            <div className="code-row ind-1">
-              <span className="kw">async def</span> <span className="fn">inspect_traffic</span>(<span className="self">self</span>, pcap):
-            </div>
-            <div className="code-row ind-2">
-              <span className="kw">return await</span> <span className="cls">AI_Anomaly_Engine</span>.<span className="fn">scan</span>(pcap)
             </div>
             <div className="code-row ind-1 typing-line">
               <span className="prompt">&gt;&gt;&gt;</span> <span className="cmd">deploy_production()</span>
