@@ -364,33 +364,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Tech Stack Pills (Clean, compact, monospace font) */}
-                <div
-                  style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '0.45rem',
-                    marginBottom: '1.75rem'
-                  }}
-                >
-                  {project.techStack.map((tech, tIdx) => (
-                    <span
-                      key={tIdx}
-                      style={{
-                        fontSize: '0.78rem',
-                        fontWeight: 600,
-                        padding: '0.25rem 0.65rem',
-                        borderRadius: '0px',
-                        backgroundColor: 'var(--code-bg)',
-                        color: 'var(--text-secondary)',
-                        border: '1px solid var(--border-color)',
-                        fontFamily: 'Fira Code, monospace'
-                      }}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+
 
                 {/* Action Buttons: Clean inline-flex aligned to left */}
                 <div
