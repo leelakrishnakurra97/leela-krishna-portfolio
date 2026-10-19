@@ -195,7 +195,7 @@ export const workExperiences = {
         {
           src: "/assets/images/copter_code/Fourth_img.jpeg",
           title: "Team & Mentors",
-          caption: "Collaborative engineering session at IITM Research Park"
+          caption: ""
         }
       ]
     }

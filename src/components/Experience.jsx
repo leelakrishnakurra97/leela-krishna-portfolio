@@ -317,12 +317,21 @@ export default function Experience() {
                         color: '#ffffff'
                       }}
                     >
-                      <h4 style={{ fontSize: '0.96rem', fontWeight: 700, marginBottom: '0.2rem', color: '#ffffff' }}>
+                      <h4
+                        style={{
+                          fontSize: '0.96rem',
+                          fontWeight: 700,
+                          marginBottom: exp.images[currentImgIdx].caption ? '0.2rem' : 0,
+                          color: '#ffffff'
+                        }}
+                      >
                         {exp.images[currentImgIdx].title}
                       </h4>
-                      <p style={{ fontSize: '0.8rem', color: '#cbd5e1', lineHeight: 1.4, margin: 0 }}>
-                        {exp.images[currentImgIdx].caption}
-                      </p>
+                      {exp.images[currentImgIdx].caption && (
+                        <p style={{ fontSize: '0.8rem', color: '#cbd5e1', lineHeight: 1.4, margin: 0 }}>
+                          {exp.images[currentImgIdx].caption}
+                        </p>
+                      )}
                     </div>
                   </div>
 
@@ -496,7 +505,7 @@ export default function Experience() {
                           display: 'flex',
                           justifyContent: 'space-between',
                           alignItems: 'center',
-                          marginBottom: '0.25rem'
+                          marginBottom: exp.images[activePhoto].caption ? '0.25rem' : 0
                         }}
                       >
                         <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#ffffff' }}>
@@ -506,9 +515,11 @@ export default function Experience() {
                           {activePhoto + 1} / {exp.images.length}
                         </span>
                       </div>
-                      <p style={{ fontSize: '0.85rem', color: '#cbd5e1', margin: 0 }}>
-                        {exp.images[activePhoto].caption}
-                      </p>
+                      {exp.images[activePhoto].caption && (
+                        <p style={{ fontSize: '0.85rem', color: '#cbd5e1', margin: 0 }}>
+                          {exp.images[activePhoto].caption}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
