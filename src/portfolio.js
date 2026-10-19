@@ -215,7 +215,6 @@ export const projects = [
     highlights: [
       "Dynamic 6-tier academic curriculum hierarchy with automated sequential topic progression",
       "Interactive low-latency WebRTC video classrooms with screen sharing via LiveKit",
-      "24/7 AI-assisted homework tutoring integration powered by Google Gemini API",
       "Robust 4-role Access Control (Student, Teacher, Admin, Superadmin) with JWT security",
       "Comprehensive quiz engines, automated grading, and student progress telemetry"
     ],
