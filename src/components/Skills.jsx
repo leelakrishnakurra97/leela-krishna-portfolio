@@ -23,7 +23,6 @@ export default function Skills() {
       description: "Developing responsive, accessible, and high-performance user interfaces and real-time client applications.",
       skills: [
         { name: "React 18", icon: "devicon-react-original colored" },
-        { name: "Next.js", icon: "devicon-nextjs-original" },
         { name: "HTML5", icon: "devicon-html5-plain colored" },
         { name: "CSS3", icon: "devicon-css3-plain colored" },
         { name: "JavaScript", icon: "devicon-javascript-plain colored" },
