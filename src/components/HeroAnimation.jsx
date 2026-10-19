@@ -1,5 +1,4 @@
 import React from 'react';
-import { Terminal, CheckCircle2 } from 'lucide-react';
 
 export default function HeroAnimation() {
   return (
@@ -55,18 +54,6 @@ export default function HeroAnimation() {
             <div className="code-row ind-1 typing-line">
               <span className="fn">deploy_production</span>()<span className="cursor">|</span>
             </div>
-          </div>
-        </div>
-
-        {/* Terminal Bottom Status Bar */}
-        <div className="ide-footer">
-          <div className="footer-left">
-            <Terminal size={13} color="#94a3b8" />
-            <span>Terminal: zsh (main)</span>
-          </div>
-          <div className="footer-right">
-            <CheckCircle2 size={13} color="#10b981" />
-            <span>0 Vulnerabilities | Build: 200 OK</span>
           </div>
         </div>
       </div>
@@ -219,24 +206,6 @@ export default function HeroAnimation() {
 
         @keyframes blinkCursor {
           to { visibility: hidden; }
-        }
-
-        /* Footer */
-        .ide-footer {
-          background: #0f172a;
-          border-top: 1px solid #1e293b;
-          padding: 0.45rem 1rem;
-          display: flex;
-          justifyContent: space-between;
-          align-items: center;
-          font-size: 0.72rem;
-          color: #94a3b8;
-        }
-
-        .footer-left, .footer-right {
-          display: flex;
-          align-items: center;
-          gap: 6px;
         }
 
         @media (max-width: 640px) {
