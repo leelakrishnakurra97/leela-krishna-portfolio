@@ -375,7 +375,7 @@ export const certificationsSection = {
       footer: [
         {
           name: "IEEE ITS Chapter",
-          url: "https://vit.ac.in",
+          url: "https://vit.ac.in/campus/chapters/ieeechapters",
           isExternal: true
         },
         {
