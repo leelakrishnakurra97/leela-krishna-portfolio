@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { workExperiences } from '../portfolio';
-import { Calendar, MapPin, CheckCircle2, Camera, Maximize2, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Calendar, MapPin, CheckCircle2, Maximize2, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 export default function Experience() {
   if (!workExperiences.display) return null;
@@ -209,8 +209,7 @@ export default function Experience() {
                       gap: '0.5rem'
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <Camera size={16} style={{ color: 'var(--accent-primary)' }} />
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
                       <span
                         style={{
                           fontSize: '0.84rem',
