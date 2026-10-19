@@ -311,7 +311,7 @@ export const clubSection = {
     {
       src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.24 (2).jpeg",
       title: "Technical Outreach & Interactive Booth",
-      caption: "Engaging students with interactive coding challenges and technology demonstrations during campus tech fests."
+      caption: "Engaging students with interactive sessions."
     },
     {
       src: "/assets/club/WhatsApp Image 2026-10-18 at 00.51.26.jpeg",
