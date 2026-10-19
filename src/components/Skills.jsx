@@ -10,7 +10,7 @@ export default function Skills() {
     'Languages',
     'Databases',
     'Cybersecurity',
-    'Cloud & DevOps'
+    'DevOps & Tools'
   ];
 
   const skillCategories = [
@@ -74,10 +74,10 @@ export default function Skills() {
       ]
     },
     {
-      id: "Cloud & DevOps",
-      name: "Cloud & DevOps",
-      title: "Cloud, DevOps & Tools",
-      description: "Cloud computing governance, container lifecycle management, CI/CD pipelines, and infrastructure tools.",
+      id: "DevOps & Tools",
+      name: "DevOps & Tools",
+      title: "DevOps & Tools",
+      description: "CI/CD pipelines and infrastructure tools.",
       skills: [
         { name: "Docker", icon: "devicon-docker-plain colored" },
         { name: "Linux CLI", icon: "devicon-linux-plain colored" },
@@ -218,7 +218,7 @@ export default function Skills() {
             backgroundColor: '#ffffff'
           }}
         >
-          {activeCategory === 'All' ? (
+          {activeCategory === 'All' || !activeCategoryData ? (
             /* ALL SKILLS UNIFIED IN ONE SINGLE GRID (NO CATEGORY SEPARATION) */
             <div
               style={{
@@ -231,8 +231,7 @@ export default function Skills() {
             </div>
           ) : (
             /* SPECIFIC CATEGORY SELECTED */
-            activeCategoryData && (
-              <div>
+            <div>
                 {/* Category Header */}
                 <div
                   style={{
