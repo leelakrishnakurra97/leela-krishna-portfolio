@@ -170,30 +170,7 @@ export default function Experience() {
                 ))}
               </div>
 
-              {/* Tech Stack Pills */}
-              {exp.techPills && (
-                <div>
-                  <div
-                    style={{
-                      fontSize: '0.8rem',
-                      fontWeight: 700,
-                      textTransform: 'uppercase',
-                      color: 'var(--text-muted)',
-                      letterSpacing: '0.05em',
-                      marginBottom: '0.75rem'
-                    }}
-                  >
-                    Technologies & Libraries Utilized
-                  </div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                    {exp.techPills.map((tech, tIdx) => (
-                      <span key={tIdx} className="tech-pill">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
+
                 </div>
 
                 {/* Right Column: Copter Code On-Site Internship Gallery */}
