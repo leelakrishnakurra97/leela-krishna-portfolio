@@ -64,7 +64,6 @@ export default function Skills() {
       description: "Relational database schema modeling, indexing, ACID compliance, and document store optimization.",
       skills: [
         { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
-        { name: "Prisma ORM", icon: "devicon-prisma-original colored" },
         { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
         { name: "MySQL", icon: "devicon-mysql-plain colored" }
       ]

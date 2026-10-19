@@ -19,7 +19,7 @@ export default function HeroAnimation() {
 
           <div className="ide-tab">
             <i className="devicon-python-plain colored" style={{ fontSize: '1rem', marginRight: '6px' }}></i>
-            <span className="tab-title">cs_engineer_profile.py</span>
+            <span className="tab-title">krishna_profile.py</span>
           </div>
         </div>
 
@@ -32,27 +32,28 @@ export default function HeroAnimation() {
             <span>04</span>
             <span>05</span>
             <span>06</span>
+            <span>07</span>
           </div>
 
           <div className="code-lines">
             <div className="code-row">
-              <span className="kw">class</span> <span className="cls">CS_ENGINEER_Profile</span>:
+              <span className="kw">class</span> <span className="cls">Krishna_Profile</span>:
             </div>
             <div className="code-row ind-1">
               <span className="kw">def</span> <span className="fn">__init__</span>(<span className="self">self</span>):
             </div>
             <div className="code-row ind-2">
-              <span className="self">self</span>.name = <span className="str">"Kurra Leela Krishna"</span>
+              <span className="self">self</span>.name = <span className="str">"Leela Krishna Kurra"</span>
             </div>
             <div className="code-row ind-2">
-              <span className="self">self</span>.branch = [<span className="str">"CSE(Cyber Security)"</span>]
+              <span className="self">self</span>.branch = <span className="str">"CSE (Cybersecurity)"</span>
             </div>
             <div className="code-row ind-2">
               <span className="self">self</span>.status = <span className="str">"Open to Opportunities"</span>
             </div>
+            <div className="code-row">&nbsp;</div>
             <div className="code-row ind-1 typing-line">
-              <span className="prompt">&gt;&gt;&gt;</span> <span className="cmd">deploy_production()</span>
-              <span className="cursor">|</span>
+              <span className="fn">deploy_production</span>()<span className="cursor">|</span>
             </div>
           </div>
         </div>
@@ -178,6 +179,12 @@ export default function HeroAnimation() {
           font-size: 0.8rem;
         }
 
+        .line-numbers span {
+          min-height: 1.7em;
+          line-height: 1.7;
+          display: block;
+        }
+
         .code-lines {
           display: flex;
           flex-direction: column;
@@ -186,6 +193,8 @@ export default function HeroAnimation() {
 
         .code-row {
           color: #cbd5e1;
+          min-height: 1.7em;
+          line-height: 1.7;
         }
 
         .ind-1 { padding-left: 1.2rem; }

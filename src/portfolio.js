@@ -99,7 +99,6 @@ export const skillsSection = {
     { skillName: "Node.js", iconClass: "devicon-nodejs-plain colored", category: "Backend" },
     { skillName: "Express.js", iconClass: "devicon-express-original", category: "Backend" },
     { skillName: "PostgreSQL", iconClass: "devicon-postgresql-plain colored", category: "Databases" },
-    { skillName: "Prisma ORM", iconClass: "devicon-prisma-original colored", category: "Databases" },
     { skillName: "MongoDB", iconClass: "devicon-mongodb-plain colored", category: "Databases" },
     { skillName: "MySQL", iconClass: "devicon-mysql-plain colored", category: "Databases" },
     { skillName: "Microsoft Azure", iconClass: "devicon-azure-plain colored", category: "Cloud & DevOps" },
