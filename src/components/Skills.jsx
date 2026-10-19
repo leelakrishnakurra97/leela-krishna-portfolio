@@ -24,37 +24,10 @@ export default function Skills() {
       skills: [
         { name: "React 18", icon: "devicon-react-original colored" },
         { name: "Next.js", icon: "devicon-nextjs-original" },
-        {
-          name: "Vite",
-          customIcon: (
-            <svg width="42" height="42" viewBox="0 0 32 32" fill="none">
-              <path
-                d="M29.897 4.148L16.892 27.652a1.05 1.05 0 01-1.848.006L2.1 4.153a1.05 1.05 0 011.39-1.428l12.51 5.485 12.502-5.49a1.05 1.05 0 011.395 1.428z"
-                fill="url(#viteGrad1)"
-              />
-              <path
-                d="M22.062 1.547L11.59 7.422l-1.395 7.828 4.316-1.07-1.574 8.797 8.875-12.875-4.254.734 4.504-9.289z"
-                fill="url(#viteGrad2)"
-              />
-              <defs>
-                <linearGradient id="viteGrad1" x1="1.5" y1="2" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#41D1FF" />
-                  <stop offset="1" stopColor="#BD34FE" />
-                </linearGradient>
-                <linearGradient id="viteGrad2" x1="10" y1="2" x2="21" y2="20" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#FFEA83" />
-                  <stop offset="1" stopColor="#FFDD35" />
-                </linearGradient>
-              </defs>
-            </svg>
-          )
-        },
         { name: "HTML5", icon: "devicon-html5-plain colored" },
         { name: "CSS3", icon: "devicon-css3-plain colored" },
-        { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain colored" },
         { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-        { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-        { name: "LiveKit WebRTC", icon: "fa-solid fa-video", iconColor: "#4f46e5" }
+        { name: "TypeScript", icon: "devicon-typescript-plain colored" }
       ]
     },
     {
@@ -112,10 +85,7 @@ export default function Skills() {
       description: "Deep packet inspection, network anomaly detection, DNS threat analysis, and secure coding standards.",
       skills: [
         { name: "Network Security", icon: "fa-solid fa-shield-halved", iconColor: "#4f46e5" },
-        { name: "Wireshark", icon: "fa-solid fa-network-wired", iconColor: "#0284c7" },
-        { name: "Packet Inspection (.pcap)", icon: "fa-solid fa-file-code", iconColor: "#f59e0b" },
-        { name: "DNS Forensics", icon: "fa-solid fa-magnifying-glass", iconColor: "#8b5cf6" },
-        { name: "DGA Detection", icon: "fa-solid fa-bug-slash", iconColor: "#ef4444" }
+        { name: "Wireshark", icon: "fa-solid fa-network-wired", iconColor: "#0284c7" }
       ]
     },
     {
@@ -125,8 +95,6 @@ export default function Skills() {
       icon: <Cloud size={20} style={{ color: 'var(--accent-primary)' }} />,
       description: "Cloud computing governance, container lifecycle management, CI/CD pipelines, and infrastructure tools.",
       skills: [
-        { name: "Microsoft Azure (AZ-104)", icon: "devicon-azure-plain colored" },
-        { name: "AWS Cloud", icon: "devicon-amazonwebservices-plain-wordmark colored" },
         { name: "Docker", icon: "devicon-docker-plain colored" },
         { name: "Linux CLI", icon: "devicon-linux-plain colored" },
         { name: "Git", icon: "devicon-git-plain colored" },
