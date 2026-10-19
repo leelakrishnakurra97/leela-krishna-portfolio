@@ -209,6 +209,33 @@ export default function Projects() {
                         }}
                       />
                     </div>
+                  ) : project.id === 'smart-society' ? (
+                    <div
+                      style={{
+                        width: '68px',
+                        height: '68px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        border: '1.5px solid var(--border-color)',
+                        borderRadius: '0px',
+                        overflow: 'hidden',
+                        backgroundColor: '#ffffff',
+                        padding: '2px'
+                      }}
+                    >
+                      <img
+                        src="/assets/projects/smart_society_logo.png"
+                        alt="Smart Society Management System"
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain',
+                          display: 'block'
+                        }}
+                      />
+                    </div>
                   ) : (
                     <div
                       style={{
