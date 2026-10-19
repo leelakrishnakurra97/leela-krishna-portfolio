@@ -19,7 +19,7 @@ export default function HeroAnimation() {
 
           <div className="ide-tab">
             <i className="devicon-python-plain colored" style={{ fontSize: '1rem', marginRight: '6px' }}></i>
-            <span className="tab-title">engineer_profile.py</span>
+            <span className="tab-title">cs_engineer_profile.py</span>
           </div>
         </div>
 
@@ -38,7 +38,7 @@ export default function HeroAnimation() {
 
           <div className="code-lines">
             <div className="code-row">
-              <span className="kw">class</span> <span className="cls">FullStackEngineer</span>:
+              <span className="kw">class</span> <span className="cls">CS_ENGINEER_Profile</span>:
             </div>
             <div className="code-row ind-1">
               <span className="kw">def</span> <span className="fn">__init__</span>(<span className="self">self</span>):
