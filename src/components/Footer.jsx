@@ -136,6 +136,7 @@ export default function Footer() {
       {/* Floating Scroll to Top Button - Sharp Borders */}
       {showScrollTop && (
         <button
+          className="scroll-top-btn"
           onClick={scrollToTop}
           aria-label="Scroll to top"
           style={{

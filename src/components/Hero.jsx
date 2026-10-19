@@ -8,6 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
+      className="hero-section"
       style={{
         paddingTop: '8rem',
         paddingBottom: '5rem',
@@ -16,6 +17,7 @@ export default function Hero() {
     >
       <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '1240px', margin: '0 auto' }}>
         <div
+          className="hero-grid"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -26,10 +28,11 @@ export default function Hero() {
         >
           {/* Left Column: Hero Content Aligned Towards Left */}
           <div
+            className="hero-content-col"
             style={{
               flex: '1 1 580px',
               maxWidth: '680px',
-              minWidth: '320px',
+              minWidth: 0,
               textAlign: 'left',
               display: 'flex',
               flexDirection: 'column',
@@ -73,6 +76,7 @@ export default function Hero() {
 
             {/* CTAs aligned strictly towards left */}
             <div
+              className="hero-cta-group"
               style={{
                 display: 'flex',
                 flexWrap: 'wrap',
@@ -129,6 +133,7 @@ export default function Hero() {
 
             {/* Social Media Links aligned towards left */}
             <div
+              className="hero-social-group"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -270,10 +275,11 @@ export default function Hero() {
 
           {/* Right Column: Animation */}
           <div
+            className="hero-anim-col"
             style={{
               flex: '1 1 440px',
               maxWidth: '520px',
-              minWidth: '300px',
+              minWidth: 0,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center'

@@ -206,6 +206,7 @@ export default function Experience() {
 
                   {/* Main Single Photo Display */}
                   <div
+                    className="experience-gallery-main"
                     onClick={() => setActivePhoto(currentImgIdx)}
                     style={{
                       position: 'relative',
@@ -337,6 +338,7 @@ export default function Experience() {
 
                   {/* Thumbnail Selector Strip Below */}
                   <div
+                    className="experience-thumb-strip"
                     style={{
                       display: 'grid',
                       gridTemplateColumns: `repeat(${exp.images.length}, 1fr)`,

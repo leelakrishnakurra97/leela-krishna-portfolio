@@ -163,6 +163,7 @@ export default function Projects() {
               >
                 {/* Header: Project Icon & Meta Badges */}
                 <div
+                  className="project-card-header"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -368,6 +369,7 @@ export default function Projects() {
 
                 {/* Action Buttons: Clean inline-flex aligned to left */}
                 <div
+                  className="project-actions-row"
                   style={{
                     display: 'flex',
                     flexWrap: 'wrap',

@@ -16,14 +16,14 @@ export default function CodingProfiles() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
             gap: '2rem',
             maxWidth: '100%'
           }}
         >
           {/* LeetCode Card */}
           <div className="glass-card" style={{ padding: '2rem 2.25rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div className="profile-card-inner" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <div
                   style={{
@@ -68,7 +68,7 @@ export default function CodingProfiles() {
 
           {/* GitHub Profile Card */}
           <div className="glass-card" style={{ padding: '2rem 2.25rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div className="profile-card-inner" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <div
                   style={{

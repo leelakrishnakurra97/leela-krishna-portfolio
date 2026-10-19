@@ -39,8 +39,9 @@ export default function Contact() {
         <div style={{ maxWidth: '800px' }}>
           {/* Heading, Subtitle, Direct Phone & Email, Social Icons */}
           <h1
+            className="contact-title"
             style={{
-              fontSize: 'clamp(2.8rem, 5.5vw, 4.4rem)',
+              fontSize: 'clamp(2.4rem, 5.5vw, 4.4rem)',
               fontWeight: 600,
               color: 'var(--text-primary)',
               marginBottom: '1.25rem',
@@ -54,11 +55,12 @@ export default function Contact() {
           >
             <span>{contactInfo.title ? contactInfo.title.replace('☎️', '').trim() : 'Contact Me'}</span>
             <img
+              className="contact-call-icon"
               src="/assets/images/black-call-icon-png.png"
               alt="Phone"
               style={{
-                width: 'clamp(2.4rem, 4.6vw, 3.4rem)',
-                height: 'clamp(2.4rem, 4.6vw, 3.4rem)',
+                width: 'clamp(2.2rem, 4.6vw, 3.4rem)',
+                height: 'clamp(2.2rem, 4.6vw, 3.4rem)',
                 objectFit: 'contain',
                 display: 'inline-block',
                 verticalAlign: 'middle'
@@ -85,14 +87,16 @@ export default function Contact() {
             {contactInfo.number && (
               <a
                 href={`tel:${contactInfo.number.replace(/\s+/g, '')}`}
+                className="contact-link-phone"
                 style={{
                   display: 'inline-block',
-                  fontSize: 'clamp(1.6rem, 3.2vw, 2.5rem)',
+                  fontSize: 'clamp(1.5rem, 3.2vw, 2.5rem)',
                   fontWeight: 400,
                   color: '#868e96',
                   textDecoration: 'none',
                   marginBottom: '1.25rem',
-                  transition: 'all 0.25s ease'
+                  transition: 'all 0.25s ease',
+                  wordBreak: 'break-all'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.color = 'var(--text-primary)';
@@ -111,9 +115,10 @@ export default function Contact() {
               <div>
                 <a
                   href={`mailto:${contactInfo.email}`}
+                  className="contact-link-email"
                   style={{
                     display: 'inline-block',
-                    fontSize: 'clamp(1.4rem, 2.8vw, 2.4rem)',
+                    fontSize: 'clamp(1.35rem, 2.8vw, 2.4rem)',
                     fontWeight: 400,
                     color: '#868e96',
                     textDecoration: 'none',

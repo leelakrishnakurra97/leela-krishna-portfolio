@@ -24,6 +24,7 @@ export default function Education() {
           {educationInfo.schools.map((school, index) => (
             <div key={index} className="glass-card" style={{ padding: '2.25rem' }}>
               <div
+                className="education-header-row"
                 style={{
                   display: 'flex',
                   flexWrap: 'wrap',
@@ -33,9 +34,13 @@ export default function Education() {
                   marginBottom: '1.25rem'
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', flex: 1, minWidth: '280px' }}>
+                <div
+                  className="education-school-info"
+                  style={{ display: 'flex', alignItems: 'flex-start', gap: '1.25rem', flex: 1, minWidth: 0 }}
+                >
                   {/* Institution Logo / Icon */}
                   <div
+                    className="education-logo-box"
                     style={{
                       width: '72px',
                       height: '72px',
@@ -67,6 +72,7 @@ export default function Education() {
 
                   <div>
                     <h3
+                      className="education-school-title"
                       style={{
                         fontSize: '1.35rem',
                         fontWeight: 800,
@@ -101,7 +107,10 @@ export default function Education() {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}>
+                <div
+                  className="education-meta-col"
+                  style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.5rem' }}
+                >
                   <div
                     style={{
                       display: 'inline-flex',

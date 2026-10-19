@@ -29,9 +29,10 @@ export default function ClubSection() {
         {/* Main Content Card */}
         <div className="glass-card" style={{ padding: '2.5rem', border: '1.5px solid var(--border-color)' }}>
           <div
+            className="club-grid-layout"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: '3rem',
               alignItems: 'center'
             }}
@@ -107,6 +108,7 @@ export default function ClubSection() {
             {/* Right Column: Interactive Gallery & Carousel */}
             <div>
               <div
+                className="club-carousel-main"
                 style={{
                   position: 'relative',
                   width: '100%',

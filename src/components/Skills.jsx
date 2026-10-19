@@ -101,6 +101,7 @@ export default function Skills() {
   const renderSkillTile = (skill, key) => (
     <div
       key={key}
+      className="skill-tile"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -127,6 +128,7 @@ export default function Skills() {
       }}
     >
       <div
+        className="skill-tile-icon"
         style={{
           fontSize: '2.85rem',
           height: '50px',
@@ -157,6 +159,7 @@ export default function Skills() {
         )}
       </div>
       <span
+        className="skill-tile-name"
         style={{
           fontSize: '0.88rem',
           fontWeight: 600,
@@ -180,6 +183,7 @@ export default function Skills() {
 
         {/* Category Filter Tabs: All | Frontend | Backend | ... */}
         <div
+          className="skills-categories-wrap"
           style={{
             display: 'flex',
             flexWrap: 'wrap',
@@ -216,7 +220,7 @@ export default function Skills() {
 
         {/* ONE SINGLE BOX WITH BIGGER LOGOS */}
         <div
-          className="glass-card"
+          className="glass-card skills-card-container"
           style={{
             padding: '2.5rem',
             border: '1.5px solid var(--border-color)',
@@ -226,6 +230,7 @@ export default function Skills() {
           {activeCategory === 'All' || !activeCategoryData ? (
             /* ALL SKILLS UNIFIED IN ONE SINGLE GRID (NO CATEGORY SEPARATION) */
             <div
+              className="skills-tile-grid"
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(135px, 1fr))',
@@ -276,6 +281,7 @@ export default function Skills() {
 
                 {/* Grid of Big Logo Tiles */}
                 <div
+                  className="skills-tile-grid"
                   style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(135px, 1fr))',
