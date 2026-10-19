@@ -53,8 +53,7 @@ export default function Skills() {
         { name: "JavaScript", icon: "devicon-javascript-plain colored" },
         { name: "C++", icon: "devicon-cplusplus-plain colored" },
         { name: "Java", icon: "devicon-java-plain colored" },
-        { name: "C", icon: "devicon-c-plain colored" },
-        { name: "SQL", icon: "fa-solid fa-database", iconColor: "#3b82f6" }
+        { name: "C", icon: "devicon-c-plain colored" }
       ]
     },
     {
@@ -67,8 +66,7 @@ export default function Skills() {
         { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
         { name: "Prisma ORM", icon: "devicon-prisma-original colored" },
         { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
-        { name: "MySQL", icon: "devicon-mysql-plain colored" },
-        { name: "Relational SQL", icon: "fa-solid fa-database", iconColor: "#0ea5e9" }
+        { name: "MySQL", icon: "devicon-mysql-plain colored" }
       ]
     },
     {
