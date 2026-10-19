@@ -8,7 +8,7 @@ export const greeting = {
   shortName: "Leela Krishna",
   title: "Hello, I'm Leela Krishna",
   subTitle:
-    "Motivated Computer Science (Cyber Security) undergraduate at VIT Vellore. Passionate about engineering high-performance full-stack applications, scalable backend microservices, cloud infrastructure, and network threat detection platforms.",
+    "Motivated Computer Science (Cyber Security) undergraduate at VIT Vellore. Interested in programming, software development, and network security. Focused on building technical skills through hands-on projects, continuous learning, and practical experience.",
   resumeLink: "/assets/docs/Kurra_Leela_Krishna_Resume.pdf",
   resumeDriveLink:
     "https://drive.google.com/file/d/1EC4-3kT1pb1PxATGwxb35gnsiiGgkoQ7/view?usp=drive_link",
