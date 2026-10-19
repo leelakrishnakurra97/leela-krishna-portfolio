@@ -236,6 +236,32 @@ export default function Projects() {
                         }}
                       />
                     </div>
+                  ) : project.id === 'netsentinel' ? (
+                    <div
+                      style={{
+                        height: '56px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        border: '1.5px solid #1e293b',
+                        borderRadius: '0px',
+                        overflow: 'hidden',
+                        backgroundColor: '#090e17'
+                      }}
+                    >
+                      <img
+                        src="/assets/projects/netsentinel_header_logo.png"
+                        alt="NetSentinel DNS Threat Intelligence"
+                        style={{
+                          height: '56px',
+                          width: 'auto',
+                          maxHeight: '100%',
+                          objectFit: 'contain',
+                          display: 'block'
+                        }}
+                      />
+                    </div>
                   ) : (
                     <div
                       style={{
