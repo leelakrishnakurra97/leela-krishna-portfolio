@@ -1,15 +1,17 @@
 # Kurra Leela Krishna - Portfolio
 
-> Personal developer portfolio showcasing projects, technical skills, certifications, education, and experience.
+> Personal developer portfolio showcasing full-stack engineering, cybersecurity platforms, cloud architecture, certifications, education, and experience.
+
+🌐 **Live Website**: [https://leelakrishnakurra97.github.io/leela-krishna-portfolio/](https://leelakrishnakurra97.github.io/leela-krishna-portfolio/)
 
 ## 🚀 Built With
 
 - **React 18**
-- **Vite**
-- **Vanilla CSS / Custom Styling**
-- **Lucide React**
-- **Lottie React**
+- **Vite 5**
+- **Vanilla CSS / Modern Design System**
+- **Lucide Icons & FontAwesome**
 - **Canvas Confetti**
+- **GitHub Pages CI/CD**
 
 ## 💻 Getting Started
 
