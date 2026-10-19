@@ -82,7 +82,7 @@ export default function Skills() {
         { name: "Docker", icon: "devicon-docker-plain colored" },
         { name: "Linux CLI", icon: "devicon-linux-plain colored" },
         { name: "Git", icon: "devicon-git-plain colored" },
-        { name: "GitHub CI/CD", icon: "devicon-github-original" }
+        { name: "GitHub", icon: "devicon-github-original" }
       ]
     }
   ];
