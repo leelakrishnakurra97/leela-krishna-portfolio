@@ -215,7 +215,6 @@ export const projects = [
     highlights: [
       "Dynamic 6-tier academic curriculum hierarchy with automated sequential topic progression",
       "Interactive low-latency WebRTC video classrooms with screen sharing via LiveKit",
-      "Robust 4-role Access Control (Student, Teacher, Admin, Superadmin) with JWT security",
       "Comprehensive quiz engines, automated grading, and student progress telemetry"
     ],
     techStack: ["TypeScript 5.6", "React 18", "Vite", "Node.js", "Express", "Prisma ORM", "PostgreSQL 16", "LiveKit WebRTC", "Gemini AI", "Docker"]
