@@ -58,7 +58,7 @@ export const skillsSection = {
       skills: [
         "⚡ Engineering scalable web applications with React, TypeScript, Node.js, Express.js, and FastAPI",
         "⚡ Designing performant RESTful APIs and real-time WebRTC communications with LiveKit",
-        "⚡ Database modeling and query optimization using PostgreSQL, Prisma ORM, MongoDB, and MySQL",
+        "⚡ Database modeling and query optimization using PostgreSQL, MongoDB, and MySQL",
         "⚡ Implementing robust security practices including JWT authentication and Role-Based Access Control (RBAC)"
       ]
     },
@@ -121,10 +121,10 @@ export const skillsSection = {
 export const techStack = {
   viewSkillBars: true,
   experience: [
-    { Stack: "Backend Development (FastAPI, Node.js, Express, Prisma)", progressPercentage: "92%" },
+    { Stack: "Backend Development (FastAPI, Node.js, Express)", progressPercentage: "92%" },
     { Stack: "Cybersecurity & Network Forensics (PCAP, Wireshark, DNS Security)", progressPercentage: "90%" },
     { Stack: "Frontend Engineering (React 18, TypeScript, Canvas, UI/UX)", progressPercentage: "88%" },
-    { Stack: "Database & ORM Management (PostgreSQL, MySQL, MongoDB)", progressPercentage: "86%" },
+    { Stack: "Database Management (PostgreSQL, MySQL, MongoDB)", progressPercentage: "86%" },
     { Stack: "Cloud & DevOps (Azure AZ-104, AWS Cloud Foundations, Docker)", progressPercentage: "84%" }
   ]
 };

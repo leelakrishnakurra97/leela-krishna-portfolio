@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import { Code2, Layers, Server, Database, ShieldCheck, Cloud } from 'lucide-react';
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -19,7 +18,6 @@ export default function Skills() {
       id: "Frontend",
       name: "Frontend",
       title: "Frontend & Full Stack",
-      icon: <Layers size={20} style={{ color: 'var(--accent-primary)' }} />,
       description: "Developing responsive, accessible, and high-performance user interfaces and real-time client applications.",
       skills: [
         { name: "React 18", icon: "devicon-react-original colored" },
@@ -33,7 +31,6 @@ export default function Skills() {
       id: "Backend",
       name: "Backend",
       title: "Backend & Systems",
-      icon: <Server size={20} style={{ color: 'var(--accent-primary)' }} />,
       description: "Engineering scalable backend architectures, high-throughput services, and RESTful APIs.",
       skills: [
         { name: "Node.js", icon: "devicon-nodejs-plain colored" },
@@ -45,7 +42,6 @@ export default function Skills() {
       id: "Languages",
       name: "Languages",
       title: "Programming Languages",
-      icon: <Code2 size={20} style={{ color: 'var(--accent-primary)' }} />,
       description: "Proficient across compiled, interpreted, and scripting languages with strong algorithmic foundations.",
       skills: [
         { name: "Python", icon: "devicon-python-plain colored" },
@@ -59,8 +55,7 @@ export default function Skills() {
     {
       id: "Databases",
       name: "Databases",
-      title: "Databases & ORMs",
-      icon: <Database size={20} style={{ color: 'var(--accent-primary)' }} />,
+      title: "Databases",
       description: "Relational database schema modeling, indexing, ACID compliance, and document store optimization.",
       skills: [
         { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
@@ -72,7 +67,6 @@ export default function Skills() {
       id: "Cybersecurity",
       name: "Cybersecurity",
       title: "Cybersecurity & Forensics",
-      icon: <ShieldCheck size={20} style={{ color: 'var(--accent-primary)' }} />,
       description: "Deep packet inspection, network anomaly detection, DNS threat analysis, and secure coding standards.",
       skills: [
         { name: "Network Security", icon: "fa-solid fa-shield-halved", iconColor: "#4f46e5" },
@@ -83,7 +77,6 @@ export default function Skills() {
       id: "Cloud & DevOps",
       name: "Cloud & DevOps",
       title: "Cloud, DevOps & Tools",
-      icon: <Cloud size={20} style={{ color: 'var(--accent-primary)' }} />,
       description: "Cloud computing governance, container lifecycle management, CI/CD pipelines, and infrastructure tools.",
       skills: [
         { name: "Docker", icon: "devicon-docker-plain colored" },
@@ -252,33 +245,16 @@ export default function Skills() {
                     borderBottom: '1px solid var(--border-color)'
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                    <div
-                      style={{
-                        width: '36px',
-                        height: '36px',
-                        backgroundColor: 'var(--badge-bg)',
-                        border: '1px solid #c7d2fe',
-                        borderRadius: '0px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexShrink: 0
-                      }}
-                    >
-                      {activeCategoryData.icon}
-                    </div>
-                    <h4
-                      style={{
-                        fontSize: '1.18rem',
-                        fontWeight: 700,
-                        color: 'var(--text-primary)',
-                        margin: 0
-                      }}
-                    >
-                      {activeCategoryData.title}
-                    </h4>
-                  </div>
+                  <h4
+                    style={{
+                      fontSize: '1.18rem',
+                      fontWeight: 700,
+                      color: 'var(--text-primary)',
+                      margin: 0
+                    }}
+                  >
+                    {activeCategoryData.title}
+                  </h4>
 
                   <span
                     style={{
