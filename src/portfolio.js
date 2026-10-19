@@ -288,10 +288,9 @@ export const clubSection = {
   description:
     "Active participant and technical organizer at the IEEE Information Theory Society (IEEE ITS) Student Chapter, VIT Vellore (established Feb 2023). Dedicated to spearheading university-wide hackathons, interactive coding workshops, and tech symposiums exploring the frontiers of information theory, quantum computing, deep learning, and scalable systems.",
   highlights: [
-    "Coordinated flagship chapter initiatives including C.A.S.A - 2K26 (Anna Auditorium) and the 24-hour Overnight Hackathon at VIT.",
-    "Organized hands-on technical workshops such as TechTrate (deep learning for wireless channel estimation) and Innoverse (Information Theory foundations).",
-    "Assisted in technical symposiums and multinational conferences including ic-ETITE'24 (hosted with VIT SCORE, Cisco, and Intel) and Quanta (IBM Qiskit quantum error correction).",
-    "Collaborated closely with chapter board leads and faculty advisors on technical event architecture, student telemetry, and campus outreach."
+    "Contributed to the development and enhancement of the chapter website, supporting its digital presence and accessibility.",
+    "Assisted with website improvements, content integration, and minor technical tasks to ensure a smooth user experience.",
+    "Supported various chapter-related initiatives through technical assistance and web-based contributions."
   ],
   gallery: [
     {
