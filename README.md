@@ -4,7 +4,7 @@
 
 🌐 **Live Website**: [https://leelakrishnakurra97.github.io/leela-krishna-portfolio/](https://leelakrishnakurra97.github.io/leela-krishna-portfolio/)
 
-## 🚀 Built With
+## Built With
 
 - **React 18**
 - **Vite 5**
@@ -13,7 +13,7 @@
 - **Canvas Confetti**
 - **GitHub Pages CI/CD**
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ npm run build
 npm run preview
 ```
 
-## 📬 Contact
+## Contact
 
 - **Name**: Kurra Leela Krishna
 - **Email**: [leelakrishna.kurra7@gmail.com](mailto:leelakrishna.kurra7@gmail.com)
