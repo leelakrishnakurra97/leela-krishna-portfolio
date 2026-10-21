@@ -5,7 +5,6 @@ import {
   ShieldCheck,
   Gamepad2,
   Building2,
-  Wrench,
   Github,
   ExternalLink,
   CheckCircle2
@@ -85,8 +84,6 @@ export default function Projects() {
         return <ShieldCheck size={22} color="#ffffff" />;
       case 'play-horizon':
         return <Gamepad2 size={22} color="#ffffff" />;
-      case 'camfix':
-        return <Wrench size={22} color="#ffffff" />;
       case 'smart-society':
         return <Building2 size={22} color="#ffffff" />;
       default:

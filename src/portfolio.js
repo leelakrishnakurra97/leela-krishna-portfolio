@@ -8,7 +8,7 @@ export const greeting = {
   shortName: "Leela Krishna",
   title: "Hello, I'm Leela Krishna",
   subTitle:
-    "Motivated Computer Science (Cyber Security) undergraduate at VIT Vellore with a foundation in programming, data structures, and web technologies. Interested in full-stack development and cybersecurity, with a focus on improving technical skills through hands-on projects, continuous learning, and practical experience.",
+    "Motivated Computer Science (Cyber Security) undergraduate at VIT Vellore. Interested in programming, software development, and network security. Focused on building technical skills through hands-on projects, continuous learning, and practical experience.",
   resumeLink: "./assets/docs/Kurra_Leela_Krishna_Resume.pdf",
   resumeDriveLink:
     "https://drive.google.com/file/d/1EC4-3kT1pb1PxATGwxb35gnsiiGgkoQ7/view?usp=drive_link",
@@ -168,13 +168,14 @@ export const workExperiences = {
       company: "Copter Code",
       location: "Chennai, Tamil Nadu, IN",
       date: "Jun 2026 – Jul 2026",
-      desc: "Architected a full-stack LMS, engineered real-time WebRTC virtual classrooms, and integrated resilient AI tutoring cascades.",
+      desc: "Engineered and optimized core backend services, real-time communications, and database architectures for an enterprise Learning Management System (LMS).",
       descBullets: [
-        "Architected a full-stack LMS using React, TypeScript, Node.js, and PostgreSQL/Prisma with 20+ models.",
-        "Engineered a real-time virtual classroom using LiveKit WebRTC, featuring low-latency video streaming, screen sharing, dynamic role permissions, and a collaborative whiteboard.",
-        "Integrated an AI Tutor with multi-turn chat context and automated multi-model fallback cascades to ensure resilient, step-by-step STEM tutoring."
+        "Built and optimized a scalable LMS with backend services and database integration, enabling efficient course, assignment, quiz and student-progress management while supporting large-scale data operations.",
+        "Implemented secure JWT authentication and granular Role-Based Access Control (RBAC) across Student, Teacher, and Admin tiers.",
+        "Developed interactive quiz engines, assignment workflows, progress tracking pipelines, and real-time virtual classroom rooms using React, TypeScript, PostgreSQL, and LiveKit WebRTC.",
+        "Integrated Prisma ORM with PostgreSQL for structured database migrations, relation modeling, and efficient low-latency data access."
       ],
-      techPills: ["React", "TypeScript", "Node.js", "Express", "Prisma ORM", "PostgreSQL", "LiveKit WebRTC", "AI Tutor", "JWT", "Docker"],
+      techPills: ["React", "TypeScript", "Node.js", "Express", "Prisma ORM", "PostgreSQL", "LiveKit WebRTC", "JWT", "Docker"],
       images: [
         {
           src: "./assets/images/copter_code/First_image.jpeg",
@@ -228,29 +229,13 @@ export const projects = [
     liveDemo: "https://github.com/leelakrishnakurra97/network-traffic-anomaly-detection",
     featured: true,
     highlights: [
-      "Built a zero-leakage packet ingestion pipeline using a dual-mode native binary and Scapy parser, extracting 14 stateless structural DNS metrics (Shannon entropy, label depth) to eliminate domain memorization",
-      "Developed an asynchronous FastAPI and React 18/Tailwind CSS dashboard featuring JWT RBAC, real-time model drift telemetry, SVG threat gauges, and an automated 38-test Pytest suite",
       "99.91% Attack Recall: Successfully identified covert DNS threats with only 10 misses across 11,662+ unseen test payloads",
-      "Hybrid risk scoring engine pairing Random Forest and Isolation Forest anomaly models"
+      "Dual-mode parser capable of ingesting raw .pcap and .pcapng network capture files",
+      "Zero data leakage architecture that strips raw domain identifiers & timestamps to prevent memorization",
+      "Hybrid risk scoring engine pairing Random Forest and Isolation Forest anomaly models",
+      "14 statistical DNS features extracted using Python, Pandas, and Wireshark inspection"
     ],
     techStack: ["Python 3.12", "FastAPI", "React 18", "Scikit-Learn", "Vite", "Pandas", "Wireshark", "PostgreSQL", "Tailwind CSS"]
-  },
-  {
-    id: "camfix",
-    category: "Full Stack",
-    title: "CAMFIX - Campus Maintenance & Asset Resolution Platform",
-    subtitle: "End-to-End Campus Facility Issue Resolution with Interactive Maps & QR Scanning",
-    repoName: "CAMFIX",
-    github: "https://github.com/leelakrishnakurra97/CAMFIX",
-    liveDemo: "https://github.com/leelakrishnakurra97/CAMFIX",
-    featured: true,
-    highlights: [
-      "Developed an end-to-end campus issue resolution web application featuring responsive role-specific dashboards (Student, Technician, Admin), interactive multi-floor campus facility maps, and QR code asset scanning to accelerate maintenance reporting",
-      "Designed and implemented a modular RESTful backend in Node.js/Express supporting PostgreSQL across 13 relational tables with indexed lookups",
-      "Engineered explainable priority calculation engine with automated safety hazard detection and SLA deadline escalation",
-      "Intelligent duplicate report detector across active tickets preventing redundant campus work orders"
-    ],
-    techStack: ["Node.js", "Express.js", "PostgreSQL", "SQLite", "JavaScript ES6+", "QR Code Engine", "JWT Auth", "REST APIs"]
   },
   {
     id: "play-horizon",
@@ -262,8 +247,9 @@ export const projects = [
     liveDemo: "https://leelakrishnakurra97.github.io/Play_Horizon_Arcade",
     featured: true,
     highlights: [
-      "Developed a buildless React-based single-page arcade platform featuring Sudoku, Neon Snake and QuizMaster with modular component architecture",
-      "Implemented HTML5 Canvas game mechanics, real-time collision detection, game loops, dynamic scoring and responsive keyboard/touch controls",
+      "Zero-bundler modular architecture delivering near-instant browser load times",
+      "Three complete featured games: Sudoku solver/generator, Neon Snake, and QuizMaster",
+      "HTML5 Canvas 60 FPS game loop mechanics with pixel-perfect collision detection",
       "Persistent leaderboards and score histories powered by client-side localStorage",
       "Responsive glassmorphism UI with smooth animations and touch/keyboard controls"
     ],
