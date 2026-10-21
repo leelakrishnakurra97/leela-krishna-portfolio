@@ -26,3 +26,7 @@ dist-ssr
 # Vite temp files
 vite.config.js.timestamp-*
 *.mjs.map
+
+# Local raw resume inputs
+RESUME_*.pdf
+extracted_resume_text.txt
