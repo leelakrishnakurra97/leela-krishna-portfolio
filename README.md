@@ -1,8 +1,8 @@
 # Kurra Leela Krishna - Portfolio
 
-> Personal developer portfolio showcasing full-stack engineering, cybersecurity platforms, cloud architecture, certifications, education, and experience.
+> Personal portfolio showcasing full-stack engineering, cybersecurity platforms, cloud architecture, certifications, education, and experience of mine.
 
-🌐 **Live Website**: [https://leelakrishnakurra97.github.io/leela-krishna-portfolio/](https://leelakrishnakurra97.github.io/leela-krishna-portfolio/)
+🌐 **Live Website**: [https://leelakrishnakurra97.github.io/leela-krishna-portfolio/](https://leelakrishnakurra97.github.io/leela-krishna-portfolio/)  (Use this link to asscess my portfolio).
 
 ## Built With
 
@@ -54,3 +54,6 @@ npm run preview
 - **Email**: [leelakrishna.kurra7@gmail.com](mailto:leelakrishna.kurra7@gmail.com)
 - **LinkedIn**: [leela-krishna-kurra](https://www.linkedin.com/in/leela-krishna-kurra)
 - **GitHub**: [leelakrishnakurra97](https://github.com/leelakrishnakurra97)
+
+
+Made with love and hardwork //////
