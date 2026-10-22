@@ -175,29 +175,7 @@ export const workExperiences = {
         "Developed interactive quiz engines, assignment workflows, progress tracking pipelines, and real-time virtual classroom rooms using React, TypeScript, PostgreSQL, and LiveKit WebRTC.",
         "Integrated Prisma ORM with PostgreSQL for structured database migrations, relation modeling, and efficient low-latency data access."
       ],
-      techPills: ["React", "TypeScript", "Node.js", "Express", "Prisma ORM", "PostgreSQL", "LiveKit WebRTC", "JWT", "Docker"],
-      images: [
-        {
-          src: "./assets/images/copter_code/First_image.jpeg",
-          title: "IITM Research Park",
-          caption: "Internship cohort at the IIT Madras Research Park campus"
-        },
-        {
-          src: "./assets/images/copter_code/Second_img.jpeg",
-          title: "LMS Engineering Team",
-          caption: "Full-Stack Developer team building the enterprise LMS at Copter Code, Chennai"
-        },
-        {
-          src: "./assets/images/copter_code/Third_image.jpeg",
-          title: "Engineering Floor",
-          caption: "Developing core LMS architecture & real-time WebRTC communications"
-        },
-        {
-          src: "./assets/images/copter_code/Fourth_img.jpeg",
-          title: "Team",
-          caption: ""
-        }
-      ]
+      techPills: ["React", "TypeScript", "Node.js", "Express", "Prisma ORM", "PostgreSQL", "LiveKit WebRTC", "JWT", "Docker"]
     }
   ]
 };

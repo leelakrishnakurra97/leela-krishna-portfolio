@@ -47,7 +47,7 @@ export default function Experience() {
         <div style={{ maxWidth: '100%' }}>
           {workExperiences.experience.map((exp, idx) => (
             <div key={idx} className="glass-card" style={{ padding: '2.5rem' }}>
-              <div className="experience-split-grid">
+              <div className={exp.images && exp.images.length > 0 ? "experience-split-grid" : ""}>
                 {/* Left Column: Experience Content */}
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   {/* Header row */}
