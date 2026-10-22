@@ -2,7 +2,7 @@
 
 > Personal portfolio showcasing full-stack engineering, cybersecurity platforms, cloud architecture, certifications, education, and experience of mine.
 
-🌐 **Live Website**: [https://leelakrishnakurra97.github.io/leela-krishna-portfolio/](https://leelakrishnakurra97.github.io/leela-krishna-portfolio/)  (Use this link to asscess my portfolio).
+🌐 **Live Website**: [https://leelakrishnakurra97.github.io/leela-krishna-portfolio/](https://leelakrishnakurra97.github.io/leela-krishna-portfolio/)            (Use this link to asscess my portfolio).
 
 ## Built With
 
