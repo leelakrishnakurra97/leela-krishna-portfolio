@@ -264,6 +264,13 @@ export const clubSection = {
     "Contributed to the development and enhancement of the chapter website, supporting its digital presence and accessibility.",
     "Assisted with website improvements, content integration, and minor technical tasks to ensure a smooth user experience.",
     "Supported various chapter-related initiatives through technical assistance."
+  ],
+  gallery: [
+    {
+      src: "./assets/club/Screenshot 2026-10-18 144757.png",
+      title: "IEEE ITS Chapter Team",
+      caption: "Group snapshot of the IEEE ITS chapter members, student leads, and event coordinators at VIT Vellore."
+    }
   ]
 };
 

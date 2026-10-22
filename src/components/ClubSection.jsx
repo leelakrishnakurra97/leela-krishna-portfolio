@@ -161,58 +161,62 @@ export default function ClubSection() {
                     <Maximize2 size={16} />
                   </div>
 
-                  {/* Carousel Controls */}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      prevImage();
-                    }}
-                    style={{
-                      position: 'absolute',
-                      left: '0.75rem',
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                      color: '#ffffff',
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '0px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      cursor: 'pointer'
-                    }}
-                    aria-label="Previous image"
-                  >
-                    <ChevronLeft size={20} />
-                  </button>
+                  {/* Carousel Controls - Only shown when multiple images exist */}
+                  {clubSection.gallery.length > 1 && (
+                    <>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          prevImage();
+                        }}
+                        style={{
+                          position: 'absolute',
+                          left: '0.75rem',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                          color: '#ffffff',
+                          width: '36px',
+                          height: '36px',
+                          borderRadius: '0px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          border: '1px solid rgba(255, 255, 255, 0.2)',
+                          cursor: 'pointer'
+                        }}
+                        aria-label="Previous image"
+                      >
+                        <ChevronLeft size={20} />
+                      </button>
 
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      nextImage();
-                    }}
-                    style={{
-                      position: 'absolute',
-                      right: '0.75rem',
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                      color: '#ffffff',
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '0px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      cursor: 'pointer'
-                    }}
-                    aria-label="Next image"
-                  >
-                    <ChevronRight size={20} />
-                  </button>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          nextImage();
+                        }}
+                        style={{
+                          position: 'absolute',
+                          right: '0.75rem',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                          color: '#ffffff',
+                          width: '36px',
+                          height: '36px',
+                          borderRadius: '0px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          border: '1px solid rgba(255, 255, 255, 0.2)',
+                          cursor: 'pointer'
+                        }}
+                        aria-label="Next image"
+                      >
+                        <ChevronRight size={20} />
+                      </button>
+                    </>
+                  )}
 
                   {/* Caption bottom bar - Solid Single Color background, zero gradients */}
                   <div
@@ -236,40 +240,42 @@ export default function ClubSection() {
                   </div>
                 </div>
 
-                {/* Thumbnails strip */}
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: `repeat(${clubSection.gallery.length}, 1fr)`,
-                    gap: '0.5rem',
-                    marginTop: '0.85rem'
-                  }}
-                >
-                  {clubSection.gallery.map((item, idx) => (
-                    <div
-                      key={idx}
-                      onClick={() => setActiveImgIndex(idx)}
-                      style={{
-                        height: '52px',
-                        borderRadius: '0px',
-                        overflow: 'hidden',
-                        cursor: 'pointer',
-                        border:
-                          activeImgIndex === idx
-                            ? '2px solid var(--accent-primary)'
-                            : '1px solid var(--border-color)',
-                        opacity: activeImgIndex === idx ? 1 : 0.65,
-                        transition: 'all 0.2s ease'
-                      }}
-                    >
-                      <img
-                        src={item.src}
-                        alt={item.title}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                    </div>
-                  ))}
-                </div>
+                {/* Thumbnails strip - Only shown when multiple images exist */}
+                {clubSection.gallery.length > 1 && (
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: `repeat(${clubSection.gallery.length}, 1fr)`,
+                      gap: '0.5rem',
+                      marginTop: '0.85rem'
+                    }}
+                  >
+                    {clubSection.gallery.map((item, idx) => (
+                      <div
+                        key={idx}
+                        onClick={() => setActiveImgIndex(idx)}
+                        style={{
+                          height: '52px',
+                          borderRadius: '0px',
+                          overflow: 'hidden',
+                          cursor: 'pointer',
+                          border:
+                            activeImgIndex === idx
+                              ? '2px solid var(--accent-primary)'
+                              : '1px solid var(--border-color)',
+                          opacity: activeImgIndex === idx ? 1 : 0.65,
+                          transition: 'all 0.2s ease'
+                        }}
+                      >
+                        <img
+                          src={item.src}
+                          alt={item.title}
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
