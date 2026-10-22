@@ -1,6 +1,7 @@
 import React from 'react';
 import { greeting, socialMediaLinks } from '../portfolio';
 import { Download, ArrowRight, Mail } from 'lucide-react';
+import HeroAnimation from './HeroAnimation';
 
 export default function Hero() {
 
@@ -25,12 +26,12 @@ export default function Hero() {
             flexWrap: 'wrap'
           }}
         >
-          {/* Hero Content Aligned Towards Left */}
+          {/* Left Column: Hero Content Aligned Towards Left */}
           <div
             className="hero-content-col"
             style={{
-              flex: '1 1 100%',
-              maxWidth: '100%',
+              flex: '1 1 580px',
+              maxWidth: '680px',
               minWidth: 0,
               textAlign: 'left',
               display: 'flex',
@@ -272,6 +273,21 @@ export default function Hero() {
                 <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
+          </div>
+
+          {/* Right Column: Animation */}
+          <div
+            className="hero-anim-col"
+            style={{
+              flex: '1 1 440px',
+              maxWidth: '520px',
+              minWidth: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            <HeroAnimation />
           </div>
         </div>
       </div>
