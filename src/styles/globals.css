@@ -399,11 +399,7 @@ video {
     width: 100% !important;
   }
 
-  .hero-anim-col {
-    max-width: 100% !important;
-    min-width: 0 !important;
-    width: 100% !important;
-  }
+
 }
 
 @media (max-width: 640px) {
