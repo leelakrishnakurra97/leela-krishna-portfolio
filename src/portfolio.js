@@ -268,7 +268,7 @@ export const clubSection = {
 };
 
 export const certificationsSection = {
-  title: "Achievements And Certifications 🏆",
+  title: "Achievements And Certifications",
   subTitle: "ACHIEVEMENTS, CERTIFICATIONS, AWARD LETTERS AND SOME COOL STUFF THAT I HAVE DONE !",
   certifications: [
     {
