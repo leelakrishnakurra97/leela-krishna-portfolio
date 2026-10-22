@@ -5,6 +5,7 @@ import {
   ShieldCheck,
   Gamepad2,
   Building2,
+  Wrench,
   Github,
   ExternalLink,
   CheckCircle2
@@ -84,6 +85,8 @@ export default function Projects() {
         return <ShieldCheck size={22} color="#ffffff" />;
       case 'play-horizon':
         return <Gamepad2 size={22} color="#ffffff" />;
+      case 'camfix':
+        return <Wrench size={22} color="#ffffff" />;
       case 'smart-society':
         return <Building2 size={22} color="#ffffff" />;
       default:
@@ -209,6 +212,22 @@ export default function Projects() {
                           display: 'block'
                         }}
                       />
+                    </div>
+                  ) : project.id === 'camfix' ? (
+                    <div
+                      style={{
+                        width: '58px',
+                        height: '58px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexShrink: 0,
+                        border: '1.5px solid var(--border-color)',
+                        borderRadius: '0px',
+                        backgroundColor: '#0f172a'
+                      }}
+                    >
+                      <Wrench size={26} color="var(--accent-primary)" />
                     </div>
                   ) : project.id === 'smart-society' ? (
                     <div

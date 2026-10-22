@@ -234,22 +234,22 @@ export const projects = [
     techStack: ["React 18 (ESM)", "JavaScript ES6+", "HTML5 Canvas", "CSS Glassmorphism", "GitHub Pages CI/CD"]
   },
   {
-    id: "smart-society",
+    id: "camfix",
     category: "Full Stack",
-    title: "Smart Society Management System",
-    subtitle: "Residential Community Administration & Automated Billing Platform",
-    repoName: "Smart_Society_Management_System",
-    github: "https://github.com/leelakrishnakurra97/Smart_Society_Management_System",
-    liveDemo: "https://github.com/leelakrishnakurra97/Smart_Society_Management_System",
+    title: "CAMFIX - Campus Maintenance & Issue Resolution Platform",
+    subtitle: "End-to-End Facility Issue Resolution with Interactive Maps & QR Scanning",
+    repoName: "CAMFIX",
+    github: "https://github.com/leelakrishnakurra97/CAMFIX",
+    liveDemo: "https://github.com/leelakrishnakurra97/CAMFIX",
     featured: false,
     highlights: [
-      "Automates monthly maintenance fee calculations and real-time payment status tracking",
-      "End-to-end complaint logging, assignment, and resolution notification workflows",
-      "Community event hall and amenity booking reservation system preventing scheduling conflicts",
-      "Role-based dashboards providing personalized views for administrators and residents",
-      "Replaced manual paperwork and spreadsheets with secure relational database persistence"
+      "Developed an end-to-end campus issue resolution web application featuring responsive role-specific dashboards (Student, Technician, Admin)",
+      "Interactive multi-floor campus facility maps and QR code asset scanning to accelerate maintenance reporting",
+      "Designed and implemented a modular RESTful backend in Node.js/Express supporting PostgreSQL across 13 relational tables with indexed lookups",
+      "Engineered explainable priority calculation engine and rule-based duplicate report detector across active tickets",
+      "Automated department routing and SLA resolution deadline tracking across campus maintenance teams"
     ],
-    techStack: ["React", "Node.js", "Express.js", "PostgreSQL", "JWT Auth", "Bcrypt"]
+    techStack: ["Node.js", "Express.js", "PostgreSQL", "SQLite", "JavaScript ES6+", "HTML5 Maps", "QR Code Engine", "JWT Auth", "REST APIs"]
   }
 ];
 
