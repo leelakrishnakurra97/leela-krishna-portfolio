@@ -200,7 +200,7 @@ export default function Experience() {
                       </span>
                     </div>
                     <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontWeight: 600 }}>
-                      {currentImgIdx + 1} of {exp.images.length} • Click to enlarge
+                      {exp.images.length > 1 ? `${currentImgIdx + 1} of ${exp.images.length} • ` : ''}Click to enlarge
                     </span>
                   </div>
 
@@ -249,61 +249,64 @@ export default function Experience() {
                       <Maximize2 size={15} />
                     </div>
 
-                    {/* Previous Photo Button */}
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        prevPhoto();
-                      }}
-                      style={{
-                        position: 'absolute',
-                        left: '0.75rem',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                        color: '#ffffff',
-                        width: '36px',
-                        height: '36px',
-                        borderRadius: '0px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        cursor: 'pointer'
-                      }}
-                      aria-label="Previous photo"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
+                    {/* Previous and Next Photo Buttons - Only when multiple photos exist */}
+                    {exp.images.length > 1 && (
+                      <>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            prevPhoto();
+                          }}
+                          style={{
+                            position: 'absolute',
+                            left: '0.75rem',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                            color: '#ffffff',
+                            width: '36px',
+                            height: '36px',
+                            borderRadius: '0px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                            cursor: 'pointer'
+                          }}
+                          aria-label="Previous photo"
+                        >
+                          <ChevronLeft size={20} />
+                        </button>
 
-                    {/* Next Photo Button */}
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        nextPhoto();
-                      }}
-                      style={{
-                        position: 'absolute',
-                        right: '0.75rem',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                        color: '#ffffff',
-                        width: '36px',
-                        height: '36px',
-                        borderRadius: '0px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '1px solid rgba(255, 255, 255, 0.2)',
-                        cursor: 'pointer'
-                      }}
-                      aria-label="Next photo"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            nextPhoto();
+                          }}
+                          style={{
+                            position: 'absolute',
+                            right: '0.75rem',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                            color: '#ffffff',
+                            width: '36px',
+                            height: '36px',
+                            borderRadius: '0px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                            cursor: 'pointer'
+                          }}
+                          aria-label="Next photo"
+                        >
+                          <ChevronRight size={20} />
+                        </button>
+                      </>
+                    )}
 
                     {/* Caption overlay at bottom */}
                     <div
@@ -336,43 +339,45 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  {/* Thumbnail Selector Strip Below */}
-                  <div
-                    className="experience-thumb-strip"
-                    style={{
-                      display: 'grid',
-                      gridTemplateColumns: `repeat(${exp.images.length}, 1fr)`,
-                      gap: '0.5rem',
-                      marginTop: '0.75rem'
-                    }}
-                  >
-                    {exp.images.map((img, iIdx) => (
-                      <div
-                        key={iIdx}
-                        onClick={() => setCurrentImgIdx(iIdx)}
-                        style={{
-                          height: '56px',
-                          borderRadius: '0px',
-                          overflow: 'hidden',
-                          border: currentImgIdx === iIdx ? '2px solid var(--accent-primary)' : '1.5px solid var(--border-color)',
-                          opacity: currentImgIdx === iIdx ? 1 : 0.65,
-                          cursor: 'pointer',
-                          transition: 'all 0.2s ease',
-                          backgroundColor: '#0a0d14'
-                        }}
-                      >
-                        <img
-                          src={img.src}
-                          alt={img.title}
+                  {/* Thumbnail Selector Strip Below - Only when multiple photos exist */}
+                  {exp.images.length > 1 && (
+                    <div
+                      className="experience-thumb-strip"
+                      style={{
+                        display: 'grid',
+                        gridTemplateColumns: `repeat(${exp.images.length}, 1fr)`,
+                        gap: '0.5rem',
+                        marginTop: '0.75rem'
+                      }}
+                    >
+                      {exp.images.map((img, iIdx) => (
+                        <div
+                          key={iIdx}
+                          onClick={() => setCurrentImgIdx(iIdx)}
                           style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover'
+                            height: '56px',
+                            borderRadius: '0px',
+                            overflow: 'hidden',
+                            border: currentImgIdx === iIdx ? '2px solid var(--accent-primary)' : '1.5px solid var(--border-color)',
+                            opacity: currentImgIdx === iIdx ? 1 : 0.65,
+                            cursor: 'pointer',
+                            transition: 'all 0.2s ease',
+                            backgroundColor: '#0a0d14'
                           }}
-                        />
-                      </div>
-                    ))}
-                  </div>
+                        >
+                          <img
+                            src={img.src}
+                            alt={img.title}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover'
+                            }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
               </div>
@@ -428,55 +433,58 @@ export default function Experience() {
                       <X size={20} />
                     </button>
 
-                    {/* Prev Button */}
-                    <button
-                      onClick={() => setActivePhoto((prev) => (prev - 1 + exp.images.length) % exp.images.length)}
-                      aria-label="Previous photo"
-                      style={{
-                        position: 'absolute',
-                        left: '0.75rem',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        zIndex: 10,
-                        backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                        color: '#ffffff',
-                        border: '1px solid rgba(255, 255, 255, 0.3)',
-                        width: '42px',
-                        height: '42px',
-                        borderRadius: '0px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        cursor: 'pointer'
-                      }}
-                    >
-                      <ChevronLeft size={24} />
-                    </button>
+                    {/* Prev/Next Buttons - Only when multiple photos exist */}
+                    {exp.images.length > 1 && (
+                      <>
+                        <button
+                          onClick={() => setActivePhoto((prev) => (prev - 1 + exp.images.length) % exp.images.length)}
+                          aria-label="Previous photo"
+                          style={{
+                            position: 'absolute',
+                            left: '0.75rem',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            zIndex: 10,
+                            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                            color: '#ffffff',
+                            border: '1px solid rgba(255, 255, 255, 0.3)',
+                            width: '42px',
+                            height: '42px',
+                            borderRadius: '0px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          <ChevronLeft size={24} />
+                        </button>
 
-                    {/* Next Button */}
-                    <button
-                      onClick={() => setActivePhoto((prev) => (prev + 1) % exp.images.length)}
-                      aria-label="Next photo"
-                      style={{
-                        position: 'absolute',
-                        right: '0.75rem',
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        zIndex: 10,
-                        backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                        color: '#ffffff',
-                        border: '1px solid rgba(255, 255, 255, 0.3)',
-                        width: '42px',
-                        height: '42px',
-                        borderRadius: '0px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        cursor: 'pointer'
-                      }}
-                    >
-                      <ChevronRight size={24} />
-                    </button>
+                        <button
+                          onClick={() => setActivePhoto((prev) => (prev + 1) % exp.images.length)}
+                          aria-label="Next photo"
+                          style={{
+                            position: 'absolute',
+                            right: '0.75rem',
+                            top: '50%',
+                            transform: 'translateY(-50%)',
+                            zIndex: 10,
+                            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                            color: '#ffffff',
+                            border: '1px solid rgba(255, 255, 255, 0.3)',
+                            width: '42px',
+                            height: '42px',
+                            borderRadius: '0px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          <ChevronRight size={24} />
+                        </button>
+                      </>
+                    )}
 
                     {/* Main Image Display */}
                     <div
@@ -513,9 +521,11 @@ export default function Experience() {
                         <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#ffffff' }}>
                           {exp.images[activePhoto].title}
                         </h4>
-                        <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
-                          {activePhoto + 1} / {exp.images.length}
-                        </span>
+                        {exp.images.length > 1 && (
+                          <span style={{ fontSize: '0.8rem', color: '#94a3b8' }}>
+                            {activePhoto + 1} / {exp.images.length}
+                          </span>
+                        )}
                       </div>
                       {exp.images[activePhoto].caption && (
                         <p style={{ fontSize: '0.85rem', color: '#cbd5e1', margin: 0 }}>
