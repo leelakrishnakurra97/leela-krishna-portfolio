@@ -269,7 +269,7 @@ export const clubSection = {
 
 export const certificationsSection = {
   title: "Achievements And Certifications",
-  subTitle: "ACHIEVEMENTS, CERTIFICATIONS, AWARD LETTERS AND SOME COOL STUFF THAT I HAVE DONE !",
+  subTitle: "ACHIEVEMENTS, CERTIFICATIONS and AWARD LETTERS.",
   certifications: [
     {
       title: "Microsoft Certified: Azure Administrator",

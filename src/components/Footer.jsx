@@ -37,11 +37,6 @@ export default function Footer() {
             gap: '1.5rem'
           }}
         >
-          {/* Logo */}
-          <span className="script-logo brand-text" style={{ fontSize: '2.2rem' }}>
-            {greeting.username}
-          </span>
-
           <p style={{ color: 'var(--text-muted)', fontSize: '0.94rem', maxWidth: '550px' }}>
             Computer Science & Engineering (Cyber Security) • Vellore Institute of Technology (VIT)
           </p>

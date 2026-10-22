@@ -30,7 +30,7 @@ export default function Hero() {
             className="hero-content-col"
             style={{
               flex: '1 1 100%',
-              maxWidth: '850px',
+              maxWidth: '100%',
               minWidth: 0,
               textAlign: 'left',
               display: 'flex',
@@ -46,14 +46,16 @@ export default function Hero() {
                 fontSize: 'clamp(2.4rem, 4.6vw, 3.8rem)',
                 fontWeight: 800,
                 letterSpacing: '-0.03em',
-                lineHeight: 1.15,
+                lineHeight: 1.2,
                 marginBottom: '1.25rem',
                 color: 'var(--text-primary)',
                 textAlign: 'left',
                 width: '100%'
               }}
             >
-              Hello, I'm <span className="brand-text">{greeting.username}</span>
+              Hello, I'm
+              <br />
+              <span className="brand-text">{greeting.username}</span>
             </h1>
 
             {/* SubTitle / Bio */}
@@ -62,12 +64,12 @@ export default function Hero() {
                 fontSize: '1.08rem',
                 color: 'var(--text-muted)',
                 lineHeight: 1.75,
-                maxWidth: '640px',
+                maxWidth: '100%',
                 marginBottom: '2.5rem',
                 textAlign: 'left',
                 width: '100%',
                 marginLeft: 0,
-                marginRight: 'auto'
+                marginRight: 0
               }}
             >
               {greeting.subTitle}
