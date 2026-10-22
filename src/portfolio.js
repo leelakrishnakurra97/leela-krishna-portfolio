@@ -265,33 +265,6 @@ export const clubSection = {
     "Contributed to the development and enhancement of the chapter website, supporting its digital presence and accessibility.",
     "Assisted with website improvements, content integration, and minor technical tasks to ensure a smooth user experience.",
     "Supported various chapter-related initiatives through technical assistance."
-  ],
-  gallery: [
-    {
-      src: "./assets/club/Screenshot 2026-10-18 144757.png",
-      title: "IEEE ITS Chapter Team",
-      caption: "Group snapshot of the IEEE ITS chapter members, student leads, and event coordinators at VIT Vellore."
-    },
-    {
-      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.21 (2).jpeg",
-      title: "IEEE ITS Official Banner Creation",
-      caption: "Crafting the official IEEE Information Theory Society hand-painted banner for university technical events."
-    },
-    {
-      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.17 (1).jpeg",
-      title: "Technical Seminar",
-      caption: "Hands-on tech session and seminar conducted in the campus auditorium for university students."
-    },
-    {
-      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.24 (2).jpeg",
-      title: "Technical Outreach & Interactive Booth",
-      caption: "Engaging students with interactive sessions."
-    },
-    {
-      src: "./assets/club/WhatsApp Image 2026-10-18 at 00.51.26.jpeg",
-      title: "Event Organizing Committee",
-      caption: "Coordinating logistics, student registrations, and tech booth operations with fellow IEEE ITS organizers."
-    }
   ]
 };
 

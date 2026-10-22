@@ -7,15 +7,19 @@ export default function ClubSection() {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const hasGallery = Boolean(clubSection.gallery && clubSection.gallery.length > 0);
+
   const prevImage = () => {
+    if (!hasGallery) return;
     setActiveImgIndex((prev) => (prev - 1 + clubSection.gallery.length) % clubSection.gallery.length);
   };
 
   const nextImage = () => {
+    if (!hasGallery) return;
     setActiveImgIndex((prev) => (prev + 1) % clubSection.gallery.length);
   };
 
-  const currentGalleryItem = clubSection.gallery[activeImgIndex];
+  const currentGalleryItem = hasGallery ? clubSection.gallery[activeImgIndex] : null;
 
   return (
     <section id="clubs" className="section-wrapper">
@@ -29,13 +33,17 @@ export default function ClubSection() {
         {/* Main Content Card */}
         <div className="glass-card" style={{ padding: '2.5rem', border: '1.5px solid var(--border-color)' }}>
           <div
-            className="club-grid-layout"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '3rem',
-              alignItems: 'center'
-            }}
+            className={hasGallery ? "club-grid-layout" : ""}
+            style={
+              hasGallery
+                ? {
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                    gap: '3rem',
+                    alignItems: 'center'
+                  }
+                : { width: '100%' }
+            }
           >
             {/* Left Column: Organization Details */}
             <div>
@@ -106,172 +114,178 @@ export default function ClubSection() {
             </div>
 
             {/* Right Column: Interactive Gallery & Carousel */}
-            <div>
-              <div
-                className="club-carousel-main"
-                style={{
-                  position: 'relative',
-                  width: '100%',
-                  height: '350px',
-                  borderRadius: '0px',
-                  overflow: 'hidden',
-                  backgroundColor: '#0a0d14',
-                  boxShadow: 'var(--card-shadow)',
-                  border: '1.5px solid var(--border-color)',
-                  cursor: 'pointer'
-                }}
-                onClick={() => setIsModalOpen(true)}
-              >
-                <img
-                  src={currentGalleryItem.src}
-                  alt={currentGalleryItem.title}
+            {hasGallery && currentGalleryItem && (
+              <div>
+                <div
+                  className="club-carousel-main"
                   style={{
+                    position: 'relative',
                     width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
-                  }}
-                />
-
-                {/* Expand icon */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: '0.75rem',
-                    right: '0.75rem',
-                    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                    color: '#ffffff',
-                    padding: '0.45rem',
+                    height: '350px',
                     borderRadius: '0px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
+                    overflow: 'hidden',
+                    backgroundColor: '#0a0d14',
+                    boxShadow: 'var(--card-shadow)',
+                    border: '1.5px solid var(--border-color)',
+                    cursor: 'pointer'
                   }}
-                  title="Click to view full photo"
+                  onClick={() => setIsModalOpen(true)}
                 >
-                  <Maximize2 size={16} />
-                </div>
-
-                {/* Carousel Controls */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    prevImage();
-                  }}
-                  style={{
-                    position: 'absolute',
-                    left: '0.75rem',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                    color: '#ffffff',
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '0px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
-                  }}
-                  aria-label="Previous image"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    nextImage();
-                  }}
-                  style={{
-                    position: 'absolute',
-                    right: '0.75rem',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.75)',
-                    color: '#ffffff',
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '0px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    border: '1px solid rgba(255, 255, 255, 0.2)'
-                  }}
-                  aria-label="Next image"
-                >
-                  <ChevronRight size={20} />
-                </button>
-
-                {/* Caption bottom bar - Solid Single Color background, zero gradients */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    padding: '0.85rem 1.25rem',
-                    backgroundColor: 'rgba(15, 23, 42, 0.92)',
-                    borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-                    color: '#ffffff'
-                  }}
-                >
-                  <h4 style={{ fontSize: '0.98rem', fontWeight: 700, marginBottom: '0.2rem', color: '#ffffff' }}>
-                    {currentGalleryItem.title}
-                  </h4>
-                  <p style={{ fontSize: '0.82rem', color: '#cbd5e1', lineHeight: 1.4 }}>
-                    {currentGalleryItem.caption}
-                  </p>
-                </div>
-              </div>
-
-              {/* Thumbnails strip */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: `repeat(${clubSection.gallery.length}, 1fr)`,
-                  gap: '0.5rem',
-                  marginTop: '0.85rem'
-                }}
-              >
-                {clubSection.gallery.map((item, idx) => (
-                  <div
-                    key={idx}
-                    onClick={() => setActiveImgIndex(idx)}
+                  <img
+                    src={currentGalleryItem.src}
+                    alt={currentGalleryItem.title}
                     style={{
-                      height: '52px',
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover'
+                    }}
+                  />
+
+                  {/* Expand icon */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '0.75rem',
+                      right: '0.75rem',
+                      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                      color: '#ffffff',
+                      padding: '0.45rem',
                       borderRadius: '0px',
-                      overflow: 'hidden',
-                      cursor: 'pointer',
-                      border:
-                        activeImgIndex === idx
-                          ? '2px solid var(--accent-primary)'
-                          : '1px solid var(--border-color)',
-                      opacity: activeImgIndex === idx ? 1 : 0.65,
-                      transition: 'all 0.2s ease'
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      border: '1px solid rgba(255, 255, 255, 0.2)'
+                    }}
+                    title="Click to view full photo"
+                  >
+                    <Maximize2 size={16} />
+                  </div>
+
+                  {/* Carousel Controls */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      prevImage();
+                    }}
+                    style={{
+                      position: 'absolute',
+                      left: '0.75rem',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                      color: '#ffffff',
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '0px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      cursor: 'pointer'
+                    }}
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      nextImage();
+                    }}
+                    style={{
+                      position: 'absolute',
+                      right: '0.75rem',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                      color: '#ffffff',
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '0px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      cursor: 'pointer'
+                    }}
+                    aria-label="Next image"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
+
+                  {/* Caption bottom bar - Solid Single Color background, zero gradients */}
+                  <div
+                    style={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      padding: '0.85rem 1.25rem',
+                      backgroundColor: 'rgba(15, 23, 42, 0.92)',
+                      borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+                      color: '#ffffff'
                     }}
                   >
-                    <img
-                      src={item.src}
-                      alt={item.title}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
+                    <h4 style={{ fontSize: '0.98rem', fontWeight: 700, marginBottom: '0.2rem', color: '#ffffff' }}>
+                      {currentGalleryItem.title}
+                    </h4>
+                    <p style={{ fontSize: '0.82rem', color: '#cbd5e1', lineHeight: 1.4 }}>
+                      {currentGalleryItem.caption}
+                    </p>
                   </div>
-                ))}
+                </div>
+
+                {/* Thumbnails strip */}
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${clubSection.gallery.length}, 1fr)`,
+                    gap: '0.5rem',
+                    marginTop: '0.85rem'
+                  }}
+                >
+                  {clubSection.gallery.map((item, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => setActiveImgIndex(idx)}
+                      style={{
+                        height: '52px',
+                        borderRadius: '0px',
+                        overflow: 'hidden',
+                        cursor: 'pointer',
+                        border:
+                          activeImgIndex === idx
+                            ? '2px solid var(--accent-primary)'
+                            : '1px solid var(--border-color)',
+                        opacity: activeImgIndex === idx ? 1 : 0.65,
+                        transition: 'all 0.2s ease'
+                      }}
+                    >
+                      <img
+                        src={item.src}
+                        alt={item.title}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
 
       {/* Lightbox Modal */}
-      <LightboxModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        items={clubSection.gallery}
-        currentIndex={activeImgIndex}
-        onIndexChange={setActiveImgIndex}
-      />
+      {hasGallery && (
+        <LightboxModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          items={clubSection.gallery}
+          currentIndex={activeImgIndex}
+          onIndexChange={setActiveImgIndex}
+        />
+      )}
     </section>
   );
 }
