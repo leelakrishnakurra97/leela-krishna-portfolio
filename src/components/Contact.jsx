@@ -47,54 +47,13 @@ export default function Contact() {
               marginBottom: '1.25rem',
               lineHeight: 1.1,
               fontFamily: 'Montserrat, Inter, sans-serif',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.65rem',
-              flexWrap: 'wrap'
+              display: 'block'
             }}
           >
             <span>{contactInfo.title ? contactInfo.title.replace('☎️', '').trim() : 'Contact Me'}</span>
-            <img
-              className="contact-call-icon"
-              src="./assets/images/black-call-icon-png.png"
-              alt="Phone"
-              style={{
-                width: 'clamp(2.2rem, 4.6vw, 3.4rem)',
-                height: 'clamp(2.2rem, 4.6vw, 3.4rem)',
-                objectFit: 'contain',
-                display: 'inline-block',
-                verticalAlign: 'middle'
-              }}
-            />
           </h1>
 
           <div style={{ marginBottom: '2.25rem' }}>
-            {contactInfo.number && (
-              <a
-                href={`tel:${contactInfo.number.replace(/\s+/g, '')}`}
-                className="contact-link-phone"
-                style={{
-                  display: 'inline-block',
-                  fontSize: 'clamp(1.5rem, 3.2vw, 2.5rem)',
-                  fontWeight: 400,
-                  color: '#868e96',
-                  textDecoration: 'none',
-                  marginBottom: '1.25rem',
-                  transition: 'all 0.25s ease',
-                  wordBreak: 'break-all'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = 'var(--text-primary)';
-                  e.currentTarget.style.transform = 'translateX(4px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#868e96';
-                  e.currentTarget.style.transform = 'translateX(0)';
-                }}
-              >
-                {contactInfo.number}
-              </a>
-            )}
 
             {contactInfo.email && (
               <div>

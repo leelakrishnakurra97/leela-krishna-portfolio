@@ -13,7 +13,6 @@ export const greeting = {
   resumeDriveLink:
     "https://drive.google.com/file/d/1EC4-3kT1pb1PxATGwxb35gnsiiGgkoQ7/view?usp=drive_link",
   location: "Vellore, Tamil Nadu 632014, India",
-  phone: "+91 9000274859",
   email: "leelakrishna.kurra7@gmail.com",
   isHireable: true,
   statusText: "Open to Software Developer, Full-Stack & Cybersecurity Roles"
@@ -355,8 +354,6 @@ export const codingProfiles = {
 
 export const contactInfo = {
   title: "Contact Me",
-  callIcon: "./assets/images/black-call-icon-png.png",
-  number: "+91-9000274859",
   email: "leelakrishna.kurra7@gmail.com",
   location: "Vellore, Tamil Nadu 632014, India"
 };
