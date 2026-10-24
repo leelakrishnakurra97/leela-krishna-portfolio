@@ -268,6 +268,7 @@ export const clubSection = {
   description:
     "Active participant and technical organizer at the IEEE Information Theory Society (IEEE ITS) Student Chapter, VIT Vellore (established Feb 2023). Dedicated to spearheading university-wide hackathons, interactive coding workshops, and tech symposiums exploring the frontiers of information theory, quantum computing, deep learning, and scalable systems.",
   highlights: [
+    "Supported various chapter-related initiatives through technical assistance.",
     "Actively involved in IEEE Information Theory Society student chapter activities, exploring information theory, cryptography, and their applications in cybersecurity.",
     "Interested in technical collaboration, research, and knowledge-sharing in information security and emerging technologies."
   ],
